@@ -21,6 +21,22 @@ angular
     // 'monospaced.qrcode'
   ]).config(function ($routeProvider) { //stateProvider
     $routeProvider
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MainCtrl'
+      })
+      .when('/soundscape', {
+        templateUrl: 'views/soundscape.html',
+        controller: 'MainCtrl'
+      })
+      .when('/nation', {
+        templateUrl: 'views/nation.html',
+        controller: 'MainCtrl'
+      })
+      .when('/intro', {
+        templateUrl: 'views/intro.html',
+        controller: 'MainCtrl'
+      })
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'

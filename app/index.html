@@ -21,19 +21,15 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <!-- <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-        </ul> -->
-        <div class="logo">LOGO</div>
-      </div>
-      <div ng-view=""></div>
-
-     
+      <header>
+        <a href="#">
+          <img id="logo" src="images/logo.png" alt="logo"/>
+        </a>
+        <h1 id="page-title"> Introduction </h1> <!-- remove the placeholder and inject the page title in here Iglacim -->
+      </header>
+      <div ng-view=""></div>    
     </div>
-
-       <!-- <script src="http://10.15.14.208:3000/socket.io/socket.io.js"></script> -->
-
+    <!-- <script src="http://10.15.14.208:3000/socket.io/socket.io.js"></script> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -86,5 +82,5 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
-</body>
+  </body>
 </html>
