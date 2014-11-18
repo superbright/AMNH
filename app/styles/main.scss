@@ -36,9 +36,9 @@ header {
   top: 10px;
 }
 
-/* Contextual Stles */
+/*-----------------Contextual Stles-----------------*/
 
-/* Intro Page Styles*/
+/*----Intro Page Styles----*/
 #intro-wrapper {
   background-image: url("../images/intro_bg.png");
   background-repeat: no-repeat;
@@ -56,13 +56,20 @@ header {
   margin: 0 auto;  
 }
 
-/* Fonts */
+/*----Video-Chat Page----*/
+#caller {
+  left: 1500px;
+  position: absolute;
+  top: 140px;
+}
+
+/*-----------------Fonts-----------------*/
 @font-face {
     font-family: "Aller";
     src: url(fonts/Aller_Std_Rg.ttf) format("truetype");
 }
 
-/* Button Styles */
+/*-----------------Button Styles-----------------*/
 button {
   font-family: "Aller";
   text-transform: uppercase;
