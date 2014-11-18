@@ -21,6 +21,10 @@ angular
     // 'monospaced.qrcode'
   ]).config(function ($routeProvider) { //stateProvider
     $routeProvider
+      .when('/tour', {
+        templateUrl: 'views/tour.html',
+        controller: 'MainCtrl'
+      }) 
       .when('/sort', {
         templateUrl: 'views/sort.html',
         controller: 'MainCtrl'
