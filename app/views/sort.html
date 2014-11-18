@@ -1,0 +1,58 @@
+<div id="sort-page" class="row">
+  <div class="col-md-3">
+    <ul id="sort-menu">
+      <li class="sort-menu-item" id="sort-videos">videos</li>
+      <li class="sort-menu-item" id="sort-images">image</li>
+      <li class="sort-menu-item" id="sort-panaromas">panaromas</li>
+      <li class="sort-menu-item" id="sort-songs">songs</li>
+    </ul>
+  </div>
+  <ul class="col-md-9">
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>The Potlatch</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>The Wedding Ceremony</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>The Hunt</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>The Whale Hunt</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>    
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>Haida Manga</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>
+    <li class="col-md-4">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
+      <span>Raven and Eagle</span>
+      <button type="button" id="" class="btn btn-love"></button>
+    </li>    
+  </ul>
+</div>
+<script type="text/javascript">//Igalcim modal js ile trigger edildiginden gormek icin bunu buraya yazmak durumunda kaldim sen js filelara integrate edersin
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+})
+</script>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-body" id=""></div>
+    <div class="modal-footer">
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    </div>
+  </div>
+</div>
