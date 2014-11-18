@@ -3,18 +3,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-/* General Styles */
+/*-----------------General Styles-----------------*/
 
 body {
-  padding:0;
-  margin:0;
+  margin: 0;
+  padding: 0;
 } // Space out content a bit
 
 .container {
-  width:2560px;
   height: 1440px;
-  padding:0;
-  margin:0;
+  margin: 0;
+  padding: 0;
+  width: 2560px;  
 } // Size of the kiosk display
 
 header {
@@ -30,13 +30,13 @@ header {
   display: inline;
   font-size: 45pt;
   font-family: "Aller";
-  text-transform: uppercase;
-  vertical-align: middle;
   position: relative;
+  text-transform: uppercase;
   top: 10px;
+  vertical-align: middle;
 }
 
-/*-----------------Contextual Stles-----------------*/
+/*-----------------Contextual Page Styles-----------------*/
 
 /*----Intro Page Styles----*/
 #intro-wrapper {
@@ -65,8 +65,10 @@ header {
 
 /*----The App----*/
 #app-promo {
-  background-image: url(../images/mask.png)
+  background-image: url(../images/mask.png);
+  background-repeat: no-repeat;
 }
+
 #promo-header {
   background-color: rgba(0,0,0,0.53);
   color: white;
@@ -75,7 +77,45 @@ header {
 }
 
 #scan {
-//width: 977px;
+}
+
+/*----Sort Page----*/
+#sort-page {
+  background-image: url(../images/forest-bg.png);
+  background-repeat: no-repeat;
+}
+
+/*-----------------Modal Styles-----------------*/
+/*----Sort Page Modal----*/
+.modal-body {
+  background-image: url(../images/video-dummy.png);
+  background-repeat: no-repeat;
+  height: 1157px;
+  width: 1920px;
+}
+
+.modal {
+  width: 2560px;
+}
+
+.modal-dialog {
+  width: 100%;
+}
+
+.modal-body {
+  margin: 200px auto;
+  margin-bottom: 0px;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.close {
+  font-size: 77px;
+  color: white;
+  text-shadow: none;
+  opacity: 1;
 }
 
 /*-----------------Fonts-----------------*/
@@ -86,16 +126,16 @@ header {
 
 /*-----------------Button Styles-----------------*/
 button {
+  color: white;
   font-family: "Aller";
   text-transform: uppercase;
-  color: white;
 }
 
 .btn-main {
   background-color: #f71919;
+  border-radius: 0px;
   color: white;
   font-size: 55pt;
-  border-radius: 0px;
   padding: 10px 210px;
 }
 .btn-main:hover,
