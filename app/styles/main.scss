@@ -56,11 +56,26 @@ header {
   margin: 0 auto;  
 }
 
-/*----Video-Chat Page----*/
+/*----Video Chat Page----*/
 #caller {
   left: 1500px;
   position: absolute;
   top: 140px;
+}
+
+/*----The App----*/
+#app-promo {
+  background-image: url(../images/mask.png)
+}
+#promo-header {
+  background-color: rgba(0,0,0,0.53);
+  color: white;
+  height: 295px;
+  width: 1009px;
+}
+
+#scan {
+//width: 977px;
 }
 
 /*-----------------Fonts-----------------*/

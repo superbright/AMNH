@@ -21,6 +21,10 @@ angular
     // 'monospaced.qrcode'
   ]).config(function ($routeProvider) { //stateProvider
     $routeProvider
+      .when('/the-app', {
+        templateUrl: 'views/the-app.html',
+        controller: 'MainCtrl'
+      })
       .when('/video-chat', {
         templateUrl: 'views/video-chat.html',
         controller: 'MainCtrl'
