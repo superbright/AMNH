@@ -1,27 +1,53 @@
-<div id="feature-page" class="row">
-  <div class="col-md-9">
+<div id="feature-page" class="row content-wrapper">
+  <div class="col-md-9 content-wrapper">
     <video id="feature-video" width="1922" class="col-md-12" controls><!-- Instert the video link here Igalcim -->
       <source src="videos/bunny.mp4" type="video/mp4">
     </video>
-    <ul class="col-md-12">
-      <li class="col-md-3">video</li>
-      <li class="col-md-3">image</li>
-      <li class="col-md-3">song</li>
-      <li class="col-md-3">album</li>
+    <ul class="col-md-12 media-toggle-list">
+      <li class="col-md-3 media-toggle-item">
+        <div class="media-toggle-item-header">
+          <span class="media-label">video</span>
+          <span class="icon video-icon"></span>
+        </div>
+      </li>
+      <li class="col-md-3 media-toggle-item">
+        <div class="media-toggle-item-header">
+          <span class="media-label">image</span>
+          <span class="icon image-icon"></span>
+        </div>
+      </li>
+      <li class="col-md-3 media-toggle-item">
+        <div class="media-toggle-item-header">
+          <span class="media-label">song</span>
+          <span class="icon song-icon"></span>
+        </div>
+      </li>
+      <li class="col-md-3 media-toggle-item">
+        <div class="media-toggle-item-header">
+          <span class="media-label">album</span>
+          <span class="icon album-icon"></span>
+        </div>  
+      </li>
     </ul>
   </div>
-  <aside class="col-md-3">
-    <h1>Media Heading</h1>
-    <p>Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
+  <aside class="col-md-3 side-content">
+    <h1 class="primary-media-heading">Media Heading</h1>
+    <p class="text">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
     <div class="divider"></div>
-    <h2>Image Caption</h2>
+    <h2 class="secondary-media-heading">Image Caption</h2>
     <p class="subtext">Whether she was as beautiful as hemlock fronds against the spring sky at sunrise or as ugly as a sea slug doesn't really matter very much to this story.</p>
-    <ul>
-      <li>
-        <button type="button" id="see-on-map" class="btn btn-main">see it on the map</button>
+    <ul class="horizontal-list">
+      <li class="horizontal-list-item">
+        <button type="button" id="see-on-map" class="btn btn-transparent">
+          <span class="icon map-icon"></span>
+          <span class="button-label">see it on the map</span>
+        </button>
       </li>
-      <li>
-        <button type="button" id="love-it" class="btn btn-main">love it</button>
+      <li class="horizontal-list-item">
+        <button type="button" id="love-it" class="btn btn-transparent">
+          <span class="icon love-icon">100K</span> <!-- Igalcim you will insert the love count here  -->       
+          <span class="button-label">love it</span>
+        </button>
       </li>
     </ul>
   </aside>
