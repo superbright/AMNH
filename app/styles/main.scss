@@ -21,19 +21,64 @@ header {
   background-color: black;
 }
 
-.ng-scope {
+.main-wrapper {
   height: 100%;
+}
+
+.content-wrapper {
+  padding: 0px;
+  margin: 0px;
 }
 
 #page-title {
   color: white;
   display: inline;
-  font-size: 45pt;
-  font-family: "Aller";
+  font-size: 50px;
+  font-family: Aller-Regular;
+  left: 40px;  
   position: relative;
   text-transform: uppercase;
-  top: 10px;
+  top: 5px;
   vertical-align: middle;
+}
+
+.icon {
+  background-color: white; //remove this once icon map is in
+  border: 1px solid red; //remove this once icon map is in
+  display: inline-block;
+}
+
+.love-icon {
+  background-color: red;
+  font-family: Aller-Regular;
+  font-size: 14px;
+  height: 45px;
+  line-height: 40px;
+  vertical-align: middle;  
+  width: 50px;
+}
+
+.map-icon {
+  height: 48px;
+  width: 58px;
+  vertical-align: middle;
+}
+
+.button-label {
+  vertical-align: middle;
+  margin-left: 10px; 
+}
+
+.horizontal-list {
+  padding-left: 0px;
+}
+
+.horizontal-list-item {
+  display: inline;
+}
+
+ul {
+  list-style: none;
 }
 
 /*-----------------Contextual Page Styles-----------------*/
@@ -54,6 +99,134 @@ header {
 #skip {
   display: block; 
   margin: 0 auto;  
+}
+
+/*----Feature Page----*/
+#feature-page {
+  background-image: url(../images/mountain-bg.png);
+  background-repeat: no-repeat;
+}
+.pagination-control {
+  color: white;
+  display: inline;
+  font-family: Aller-Light;  
+  font-size: 50px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 15px;
+}
+
+.arrow-right,.arrow-left {
+  height: 48px;
+  position: relative;
+  top: 2px;
+  width: 20px;
+}
+
+.page-number {
+  padding: 0 50px;
+}
+
+#feature-video {
+  padding: 0px;
+}
+
+.side-content {
+  padding: 150px 60px 209px 60px;
+  background-color: rgba(0,0,0,.5);
+}
+
+.primary-media-heading {
+  font-family: Aller-Bold;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 44px;
+  margin-bottom: 40px;
+}
+
+.secondary-media-heading {
+  font-family: Aller-Regular;
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-family: Aller-Regular;
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 36px; 
+}
+.subtext {
+  font-family: Aller-LightItalic;
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 36px;
+  margin-bottom: 160px;
+}
+
+.divider {
+  border-top: 4px solid #FFFFFF;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+#love-it {
+  margin-left: 30px;
+}
+
+.media-toggle-list{
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.media-toggle-item {
+  padding: 0px;
+  background-color: rgba(255,255,255,0.2);
+  height: 270px;
+}
+
+.media-toggle-item-header {
+  background-color: black;
+  height: 48px;
+  padding: 10px 0px; 
+}
+
+.media-label {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 22px;
+  line-height: 27px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.video-icon, .image-icon, .song-icon, .album-icon {
+  float: right;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.video-icon {
+  height: 27px;
+  width: 27px;
+}
+
+.image-icon {
+  height: 20px;
+  width: 31px;
+}
+
+.song-icon {
+  height: 26px;
+  width: 30px;
+}
+
+.album-icon {
+  height: 21px;
+  width: 31px;
 }
 
 /*----Video Chat Page----*/
@@ -154,5 +327,35 @@ button {
   background-image: none;
   color: #f71919;
 }
+
+.btn-transparent {
+  background-color: transparent;
+  border-radius: 0px;
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 28px;
+  line-height: 34px;
+  padding: 0px;
+  transition: all .2s ease-in-out;
+}
+.btn-transparent:hover,
+.btn-transparent:focus {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.1);
+}
+.btn-transparent:active,
+.btn-transparent.active {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.1);
+}
+.btn-transparent:disabled,
+.btn-transparent[disabled] {
+  background-color: transparent;
+  color: white;
+  background-image: none;
+}
+
  
 

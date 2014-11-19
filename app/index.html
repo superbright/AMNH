@@ -26,8 +26,13 @@
           <img id="logo" src="images/logo.png" alt="logo"/>
         </a>
         <h1 id="page-title">Page Title</h1> <!-- remove the placeholder and inject the page title in here Iglacim -->
+        <div class="pagination-control"> <!-- This should be hidden in general but shown when a pagination is relevant to the context --> 
+          <span class="icon arrow-left"></span>
+          <span class="page-number"> 1/8 </span> 
+          <span class="icon arrow-right"></span>
+        </div>
       </header>
-      <div ng-view=""></div>    
+      <div ng-view="" class="main-wrapper"></div>    
     </div>
     <!-- <script src="http://10.15.14.208:3000/socket.io/socket.io.js"></script> -->
 
