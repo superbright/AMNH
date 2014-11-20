@@ -236,6 +236,57 @@ ul {
   top: 140px;
 }
 
+#called-person, #chat-info {
+  padding: 0;
+}
+
+#chat-info {
+  background-color: rgba(0,0,0,.85);
+}
+
+#chat-title {
+  color: white;
+  background-color: #f71919;
+  font-family: Aller-Bold;
+  font-size: 89px;
+  margin-top: 275px;
+  padding: 90px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#chat-text {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 30px;
+  padding: 50px 80px 90px;
+}
+
+#chat-date {
+  color: white;
+  font-family: Aller-Light;
+  font-size: 50px;
+  padding: 0px 90px 0px;
+  margin-bottom: 0px;
+}
+
+#chat-time {
+  color: white;
+  font-family: Aller-Bold;
+  font-size: 100px;
+  padding-left: 90px;
+  margin-top: 5px;
+}
+
+#chat-actions {
+  padding: 150px 90px 60px;
+}
+
+.person-icon, .camera-icon {
+  height: 90px;
+  width: 90px; 
+}
+
 /*----The App----*/
 #app-promo {
   background-image: url(../images/mask.png);

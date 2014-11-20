@@ -1,18 +1,26 @@
-<div id="video-chat-page" class="row">
-  <video id="called-person" class="col-md-9" width="1922" controls><!-- Instert the video link here Igalcim -->
+<div id="video-chat-page" class="row content-wrapper">
+  <video id="called-person" class="col-md-9" height="1350" controls><!-- Instert the video link here Igalcim -->
     <source src="videos/bunny.mp4" type="video/mp4">
   </video>
   <video id="caller" width="358" controls><!-- Instert the video link here Igalcim -->
     <source src="videos/bunny.mp4" type="video/mp4">
   </video>
-  <aside class="col-md-3">
-    <h1>Chat with Haida</h1>
-    <p>Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land </p>
-    <h2>Next Wednesday</h2>
-    <h3>3.00 PM</h3>
-    <ul>
-      <li>Camera Icon</li>
-      <li>Add Person Icon</li>
+  <aside class="col-md-3" id="chat-info">
+    <h1 id="chat-title">Chat with Haida</h1>
+    <p id="chat-text">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land </p>
+    <h2 id="chat-date">Next Wednesday</h2>
+    <h3 id="chat-time">3.00 PM</h3>
+     <ul id="chat-actions">
+      <li class="horizontal-list-item">
+        <button type="button" id="camera" class="btn btn-transparent">
+          <span class="icon camera-icon"></span>
+        </button>
+      </li>
+      <li class="horizontal-list-item">
+        <button type="button" id="add-person" class="btn btn-transparent">
+          <span class="icon person-icon"></span> <!-- Igalcim you will insert the love count here  -->       
+        </button>
+      </li>
     </ul>
   </aside>
 </div>
