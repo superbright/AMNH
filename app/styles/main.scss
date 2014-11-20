@@ -28,6 +28,7 @@ header {
 .content-wrapper {
   padding: 0px;
   margin: 0px;
+  height: 1440px;
 }
 
 #page-title {
@@ -132,8 +133,9 @@ ul {
 }
 
 .side-content {
-  padding: 150px 60px 209px 60px;
   background-color: rgba(0,0,0,.5);
+  height: 100%;
+  padding: 150px 60px 209px 60px;
 }
 
 .primary-media-heading {
@@ -182,9 +184,9 @@ ul {
 }
 
 .media-toggle-item {
-  padding: 0px;
   background-color: rgba(255,255,255,0.2);
-  height: 270px;
+  height: 360px;
+  padding: 0px;
 }
 
 .media-toggle-item-header {
@@ -240,8 +242,13 @@ ul {
   padding: 0;
 }
 
+#called-person {
+  height: 100%;
+}
+
 #chat-info {
   background-color: rgba(0,0,0,.85);
+  height: 100%;
 }
 
 #chat-title {
@@ -249,8 +256,8 @@ ul {
   background-color: #f71919;
   font-family: Aller-Bold;
   font-size: 89px;
-  margin-top: 275px;
-  padding: 90px;
+  margin-top: 196px;
+  padding: 40px 90px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -288,19 +295,95 @@ ul {
 }
 
 /*----The App----*/
+#the-app-page {
+  background-image: url(../images/mountain-bg.png);
+}
+
 #app-promo {
   background-image: url(../images/mask.png);
   background-repeat: no-repeat;
+  height: 1440px;
+  padding: 0;
 }
 
 #promo-header {
   background-color: rgba(0,0,0,0.53);
   color: white;
-  height: 295px;
+  margin: 180px 0px 60px 575px;
+  padding: 40px 50px 50px 100px;
   width: 1009px;
 }
 
+.alternate-font-header {
+  font-family: Bembo;
+  font-size: 120px;
+  text-align: right;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.promo-title {
+  font-family: Aller-Bold;
+  font-size: 94px;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+}
+
+#promo-video {
+  margin-left: 575px;
+}
+
+#download {
+  float: right;
+  margin-right: 120px;
+  margin-top: 35px;
+  padding: 10px 20px;
+}
+
+.arrow-right-small {
+  border: none;
+  height: 17px;
+  margin-left: 10px;
+  width: 8px;
+}
+
 #scan {
+  background-color: rgba(0,0,0,.5);
+  height: 100%;
+  padding: 0;
+}
+
+#first-scan-instruction {
+  color: white;
+  font-family: Aller-Bold;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 90px;
+}
+
+#second-scan-instruction {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0px 200px 60px;
+}
+
+#continue {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 90px;
+  text-align: center;
+}
+
+#phone-scan-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  text-align: center;
 }
 
 /*----Sort Page----*/
@@ -348,6 +431,11 @@ ul {
     src: url(fonts/Aller_Std_Rg.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Bembo";
+    src: url(fonts/Bembo/BemboBookMTPro-Regular.otf) format("opentype");
+}
+
 /*-----------------Button Styles-----------------*/
 button {
   color: white;
@@ -359,7 +447,7 @@ button {
   background-color: #f71919;
   border-radius: 0px;
   color: white;
-  font-size: 55pt;
+  font-size: 60px;
   padding: 10px 210px;
 }
 .btn-main:hover,
@@ -408,5 +496,28 @@ button {
   background-image: none;
 }
 
- 
+.btn-small {
+  background-color: #f71919;
+  border-radius: 0px;
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 24px;
+  padding: 0px;
+}
+.btn-small:hover,
+.btn-small:focus {
+  background-color: white;
+  color: #f71919;
+}
+.btn-small:active,
+.btn-small.active {
+  background-color: white;
+  color: #f71919;
+}
+.btn-small:disabled,
+.btn-small[disabled] {
+  background-color: white;
+  color: #f71919;
+  background-image: none;
+}
 
