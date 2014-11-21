@@ -1,43 +1,87 @@
-<div id="sort-page" class="row">
-  <div class="col-md-3">
+<div id="sort-page" class="row content-wrapper">
+  <div class="col-md-3 sort-menu-wrapper">
     <ul id="sort-menu">
-      <li class="sort-menu-item" id="sort-videos">videos</li>
-      <li class="sort-menu-item" id="sort-images">image</li>
-      <li class="sort-menu-item" id="sort-panaromas">panaromas</li>
-      <li class="sort-menu-item" id="sort-songs">songs</li>
+      <li class="sort-menu-item" id="sort-videos">
+        <div class="sort-menu-item-wrapper">
+          <span class="icon video-icon"></span>
+          <span class="sort-menu-item-label">videos</span>
+        </div>
+      </li>
+      <li class="sort-menu-item" id="sort-images">
+        <div class="sort-menu-item-wrapper">
+          <span class="icon image-icon"></span>
+          <span class="sort-menu-item-label">image</span>
+        </div>
+      </li>
+      <li class="sort-menu-item" id="sort-panaromas">
+        <div class="sort-menu-item-wrapper">
+          <span class="icon panaroma-icon"></span>
+          <span class="sort-menu-item-label">panaromas</span>
+        </div>
+      </li>
+      <li class="sort-menu-item" id="sort-songs">
+        <div class="sort-menu-item-wrapper">
+          <span class="icon song-icon"></span>
+          <span class="sort-menu-item-label">songs</span>
+        </div>      
+      </li>
     </ul>
   </div>
-  <ul class="col-md-9">
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>The Potlatch</span>
-      <button type="button" id="" class="btn btn-love"></button>
+  <ul class="col-md-9 media-toggle-list">
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">The Potlatch</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">2.4K</span>
+        </button>
+      </div>
     </li>
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>The Wedding Ceremony</span>
-      <button type="button" id="" class="btn btn-love"></button>
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">The Wedding Ceremony</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">10</span>
+        </button>
+      </div>
     </li>
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>The Hunt</span>
-      <button type="button" id="" class="btn btn-love"></button>
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">The Hunt</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">10</span>
+        </button>
+      </div>
     </li>
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>The Whale Hunt</span>
-      <button type="button" id="" class="btn btn-love"></button>
-    </li>    
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>Haida Manga</span>
-      <button type="button" id="" class="btn btn-love"></button>
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">The Whale Hunt</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">2.4K</span>
+        </button>
+      </div>
     </li>
-    <li class="col-md-4">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> media image</div>
-      <span>Raven and Eagle</span>
-      <button type="button" id="" class="btn btn-love"></button>
-    </li>    
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">Haida Manga</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">10</span>
+        </button>
+      </div>
+    </li>
+    <li class="col-md-4 media-toggle-item">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">Raven and Eagle</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">10</span>
+        </button>
+      </div>
+    </li>          
   </ul>
 </div>
 <script type="text/javascript">//Igalcim modal js ile trigger edildiginden gormek icin bunu buraya yazmak durumunda kaldim sen js filelara integrate edersin
