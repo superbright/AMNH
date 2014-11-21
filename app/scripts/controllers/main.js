@@ -23,6 +23,80 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope) {
 	    title: 'Pic 3'
 	  }];
 
+
+
+	  $scope.exhibit = [{
+	  		ojects : [
+				  		{
+				  			idkey: '0', 
+				  			title: 	'object title',
+				  			description: 'title',
+				  			mapid	: 0,
+				  			media : {
+				  				coverimage : '1.jpg',
+				  				slideshowimages : 	[
+				  										{
+				  											filename: '1.jpg',
+				  											caption: 'caption',
+				  											description : 'image description'
+
+				  										},
+				  										{
+				  											filename: '1.jpg',
+				  											caption: 'caption',
+				  											description : 'image description'
+
+				  										}
+				  									],
+				  				video: 'video.mp4',
+				  				audio: 'audio.mp3'
+				  			},
+				  			likes : 0,
+				  			relatedobjects : [0,1,2]
+					  	},
+					  	{
+				  			idkey: '1', 
+				  			title: 	'object title 2',
+				  			description: 'title',
+				  			mapid	: 0,
+				  			media : {
+				  				coverimage : '1.jpg',
+				  				slideshowimages : 	[
+				  										{
+				  											filename: '1.jpg',
+				  											caption: 'caption',
+				  											description : 'image description'
+
+				  										},
+				  										{
+				  											filename: '1.jpg',
+				  											caption: 'caption',
+				  											description : 'image description'
+
+				  										}
+				  									],
+				  				video: 'video.mp4',
+				  				audio: 'audio.mp3'
+				  			},
+				  			likes : 0,
+				  			relatedobjects : [0,1,2]
+					  	}
+
+		  			],
+		  	maplocations : 	[
+		  						{
+		  							title 		: 'title',
+		  							description : 'description',
+		  							headerimage : 'mapimage.jpg',
+		  							iconimage 	: 'iconimage.png',
+		  							location 	: [20,30]
+		  						}
+
+
+		  					]
+
+	  }];
+
 	 
 	 // mySocket.forward('ios', $scope);
 	 // $scope.$on('socket:ios', function (ev, data) {

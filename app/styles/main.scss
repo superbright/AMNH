@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "helpers";
+
 /*-----------------General Styles-----------------*/
 
 body {
@@ -519,5 +521,24 @@ button {
   background-color: white;
   color: #f71919;
   background-image: none;
+}
+
+.sort-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -3.5em -6.5em;
+            background-repeat: no-repeat;
+            width: 165px;
+            height: 165px;
+            &:hover {
+                background-position:-17em -6.5em;
+                cursor: pointer;
+                cursor: hand;
+            }
+
+}
+
+#nation-page {
+  background-color: gray;
 }
 
