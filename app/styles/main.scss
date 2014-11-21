@@ -24,13 +24,13 @@ header {
 }
 
 .main-wrapper {
-  height: 100%;
+  height: 1352px;
 }
 
 .content-wrapper {
   padding: 0px;
   margin: 0px;
-  height: 1440px;
+  height: 1352px;
 }
 
 #page-title {
@@ -48,7 +48,7 @@ header {
 .icon {
   background-color: white; //remove this once icon map is in
   border: 1px solid red; //remove this once icon map is in
-  display: inline-block;
+  display: inline-block; 
 }
 
 .love-icon {
@@ -86,6 +86,49 @@ ul {
 
 /*-----------------Contextual Page Styles-----------------*/
 
+/*Nation Page Styles*/
+#nation-page {
+  background-image: url(../images/mountain-bg.png);
+  background-repeat: no-repeat;
+
+  .media-label {
+    font-size: 32px;
+    line-height: 40px;
+    padding-left: 30px;
+    text-transform: capitalize;
+  }
+
+  .love-icon {
+    font-size: 12px;
+    height: 36px;
+    width: 40px;
+  }
+}
+
+#featured-media {
+  margin-top: 220px;
+}
+
+.main-nav, .main-nav-item {
+  padding: 0;
+
+  .media-preview-image {
+      height: 412px;
+      background-image: url(../images/nav-item.png);
+      background-repeat: no-repeat;
+  } 
+}
+
+.nav-item-label {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 30px;
+  height: 50%;
+  padding-top: 45%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /*----Intro Page Styles----*/
 #intro-wrapper {
   background-image: url("../images/intro_bg.png");
@@ -96,7 +139,7 @@ ul {
 #intro-video {
   display: block; 
   margin: 0 auto;
-  padding-top: 231px;
+  padding-top: 165px;
 }
 
 #skip {
@@ -104,11 +147,95 @@ ul {
   margin: 0 auto;  
 }
 
+/*----Map Page----*/
+#map-page {}
+.full-screen-map {
+  background-image: url(../images/map-colored.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0;
+
+  .love-it {
+    float: none;
+    margin-right: 0;
+    margin-left: 92%;
+  }
+}
+
+.map-overlay {
+  background-color: rgba(2,2,2,0.7);
+  height: 100%;  
+  padding: 0;
+}
+
+.map-overlay-content {
+  padding: 40px 60px;
+}
+
+.map-overlay-img {
+  background-image: url(../images/map-overlay-image.png);
+  background-repeat: no-repeat;
+  height: 408px;
+  margin-bottom: 20px;
+}
+
+.map-overlay-title {
+  color: white;
+  font-family: Aller-Bold;
+  font-size: 36px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.map-overlay-text, {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 30px;
+}
+
+.map-controls {
+  float: right;
+  padding: 0;
+  padding-left: 3%;
+  padding-top: 48%;
+
+  button {
+    float: none;
+  }
+}
+
+.zoom-out-icon,.zoom-in-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.zoom-in-icon {
+  margin-right: 25px;
+}
+
+.close-icon {
+  height: 77px;
+  width: 77px;
+  margin-left: 55px;
+}
+
 /*----Feature Page----*/
 #feature-page {
   background-image: url(../images/mountain-bg.png);
   background-repeat: no-repeat;
+
+  .video-icon, .image-icon, .song-icon, .album-icon {
+    float: right;
+    margin-right: 15px;
+  }
+
+  .media-preview-image {
+    height: 225px;
+  }
 }
+
 .pagination-control {
   color: white;
   display: inline;
@@ -187,13 +314,11 @@ ul {
 
 .media-toggle-item {
   background-color: rgba(255,255,255,0.2);
-  height: 360px;
   padding: 0px;
 }
 
 .media-toggle-item-header {
   background-color: black;
-  height: 48px;
   padding: 10px 0px; 
 }
 
@@ -204,12 +329,6 @@ ul {
   line-height: 27px;
   padding-left: 20px;
   text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.video-icon, .image-icon, .song-icon, .album-icon {
-  float: right;
-  margin-right: 15px;
   vertical-align: middle;
 }
 
@@ -304,7 +423,7 @@ ul {
 #app-promo {
   background-image: url(../images/mask.png);
   background-repeat: no-repeat;
-  height: 1440px;
+  height: 1352px;
   padding: 0;
 }
 
@@ -392,6 +511,72 @@ ul {
 #sort-page {
   background-image: url(../images/forest-bg.png);
   background-repeat: no-repeat;
+
+  .media-toggle-list {
+    margin-top: 180px;
+  }
+
+  .media-label {
+    font-size: 32px;
+    line-height: 40px;
+    padding-left: 30px;
+    text-transform: capitalize;
+  }
+
+  .love-icon {
+    font-size: 12px;
+    height: 36px;
+    width: 40px;
+  }
+}
+
+.love-it {
+  float: right;
+  margin-right: 25px;
+}
+
+.sort-menu-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 490px;
+}
+
+#sort-menu {
+  margin-top: 160px;
+}
+
+.sort-menu-item {
+  font-family: Aller-Regular;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 44px;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  width: 353px;
+}
+
+.sort-menu-item:hover, .sort-menu-item:active {
+  background-color: rgba(255,255,255,0.44);
+}
+
+.sort-menu-item-label {
+  margin-left: 40px;
+}
+
+.panaroma-icon {
+  height: 25px;
+  width: 45px;
+}
+
+#sort-panaromas {
+  .sort-menu-item-label {
+    margin-left: 25px;
+  } 
+}
+
+.media-preview-image {
+  background-image: url('../images/dummy.png');
+  height: 300px;
 }
 
 /*-----------------Modal Styles-----------------*/
