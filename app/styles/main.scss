@@ -145,6 +145,80 @@ ul {
   margin: 0 auto;  
 }
 
+/*----Map Page----*/
+#map-page {}
+.full-screen-map {
+  background-image: url(../images/map-colored.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0;
+
+  .love-it {
+    float: none;
+    margin-right: 0;
+    margin-left: 92%;
+  }
+}
+
+.map-overlay {
+  background-color: rgba(2,2,2,0.7);
+  height: 100%;  
+  padding: 0;
+}
+
+.map-overlay-content {
+  padding: 40px 60px;
+}
+
+.map-overlay-img {
+  background-image: url(../images/map-overlay-image.png);
+  background-repeat: no-repeat;
+  height: 408px;
+  margin-bottom: 20px;
+}
+
+.map-overlay-title {
+  color: white;
+  font-family: Aller-Bold;
+  font-size: 36px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.map-overlay-text, {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 30px;
+}
+
+.map-controls {
+  float: right;
+  padding: 0;
+  padding-left: 3%;
+  padding-top: 48%;
+
+  button {
+    float: none;
+  }
+}
+
+.zoom-out-icon,.zoom-in-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.zoom-in-icon {
+  margin-right: 25px;
+}
+
+.close-icon {
+  height: 77px;
+  width: 77px;
+  margin-left: 55px;
+}
+
 /*----Feature Page----*/
 #feature-page {
   background-image: url(../images/mountain-bg.png);
