@@ -84,6 +84,49 @@ ul {
 
 /*-----------------Contextual Page Styles-----------------*/
 
+/*Nation Page Styles*/
+#nation-page {
+  background-image: url(../images/mountain-bg.png);
+  background-repeat: no-repeat;
+
+  .media-label {
+    font-size: 32px;
+    line-height: 40px;
+    padding-left: 30px;
+    text-transform: capitalize;
+  }
+
+  .love-icon {
+    font-size: 12px;
+    height: 36px;
+    width: 40px;
+  }
+}
+
+#featured-media {
+  margin-top: 220px;
+}
+
+.main-nav, .main-nav-item {
+  padding: 0;
+
+  .media-preview-image {
+      height: 412px;
+      background-image: url(../images/nav-item.png);
+      background-repeat: no-repeat;
+  } 
+}
+
+.nav-item-label {
+  color: white;
+  font-family: Aller-Regular;
+  font-size: 30px;
+  height: 50%;
+  padding-top: 45%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /*----Intro Page Styles----*/
 #intro-wrapper {
   background-image: url("../images/intro_bg.png");
