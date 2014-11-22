@@ -1,32 +1,4 @@
-.exhibitbody {
-  width: 50%;
-  background-color:gray;
-  height:600px;
-}
 
-.logo {
-  background-color:red;
-  width:100px;
-  height:45px;
-  float:left;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.footer {
-  padding:0px;
-  margin:0px;
-}
-
-/* Custom page header */
-header {
-  background-color: black;
-}
-
-/* Custom page footer */
-footer {
- 
-}
 
 .center-grey{
        background:#f2f2f2;
@@ -36,36 +8,20 @@ footer {
   position: relative;
   padding:0px;
   margin: auto;
-  margin-top: 0px;
+  //margin-top: 0px;
 }
-.slide{
+.slide {
   position:absolute;
   top:0;
   left:0;
   box-shadow: 0px 0px 15px #999;
 
     img {
-          width:2560px;
+         width:2560px;
     }
 }
 
-.arrows{
-  position: absolute;
-  top: 10px;
-  right: 20px;
-}
 
-.arrows img{
-  height: 32px;
-}
-
-h1{
-text-align: center;
-padding: 10px;
-font-size: 40px;
-color: #222;
-}
- 
 .slide.ng-hide-add, .slide.ng-hide-remove {
   -webkit-transition:all ease-out 2.0s;
   -moz-transition:all ease-out 2.0s;
