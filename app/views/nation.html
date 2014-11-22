@@ -1,98 +1,38 @@
 <div id="nation-page" class="row content-wrapper">
-  <ul id="featured-media" class="col-md-12 media-toggle-list">
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Potlatch</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">2.4K</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Wedding Ceremony</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Hunt</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">Carving Wooden Masks</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>    
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Whale Hunt</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">2.4K</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">Haida Manga</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">Raven and Eagle</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-3 media-toggle-item">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Forest</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>                   
-  </ul>
+  
+
+    <ul id="featured-media" class="col-md-12 media-toggle-list">
+      <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects">
+        <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
+        <div class="media-toggle-item-header">
+          <span class="media-label">{{object.title}}</span>
+          <button type="button" id="" class="btn btn-transparent love-it">
+            <span class="icon love-icon">{{object.likes}}</span>
+          </button>
+        </div>
+      </li>                 
+    </ul>
+
   <ul class="col-md-12 main-nav">
     <li class="col-md-3 main-nav-item">
-      <div id="sort" class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-        <div class="nav-item-label sort-icon"></div>
+      <div id="sort"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+        <div class="nav-item-label sort-icon">Label</div>
       </div>
 
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="soundscape"class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-        <div class="nav-item-label">Soundscape</div>
+      <div id="soundscape"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+        <div class="nav-item-label soundscape-icon">Soundscape</div>
       </div>
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="video-call"  class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-        <div class="nav-item-label">Video Call</div>
+      <div id="video-call" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+        <div class="nav-item-label videocall-icon">Video Call</div>
       </div>
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="the-app" class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-        <div class="nav-item-label">The App</div>
+      <div id="the-app"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+        <div class="nav-item-label phone-icon">The App</div>
       </div>
     </li>
   </ul>
