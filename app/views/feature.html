@@ -1,4 +1,4 @@
-<div id="feature-page" class="row content-wrapper">
+<div id="feature-page" class="row content-wrapper" data-ng-init="featureinit()">  
   <div class="col-md-9 content-wrapper">
     <video id="feature-video" width="1922" class="col-md-12" controls><!-- Instert the video link here Igalcim -->
       <source src="videos/bunny.mp4" type="video/mp4">
@@ -35,7 +35,7 @@
     </ul>
   </div>
   <aside class="col-md-3 side-content">
-    <h1 class="primary-media-heading">Media Heading</h1>
+    <h1 class="primary-media-heading">{{currentObject.title}}</h1>
     <p class="text">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
     <div class="divider"></div>
     <h2 class="secondary-media-heading">Image Caption</h2>

@@ -114,7 +114,7 @@ ul {
 
   .media-preview-image {
       height: 412px;
-      background-image: url(../images/nav-item.png);
+      //background-image: url(../images/nav-item.png);
       background-repeat: no-repeat;
   } 
 }
@@ -124,7 +124,7 @@ ul {
   font-family: Aller-Regular;
   font-size: 30px;
   height: 50%;
-  padding-top: 45%;
+  padding-top: 32%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -711,15 +711,61 @@ button {
 .sort-icon {
 
             @include background-image-sb("iconsetgeneral", 1071px 1536px);
-            background-position: -3.5em -6.5em;
+            background-position: -88px -568px;
             background-repeat: no-repeat;
-            width: 165px;
-            height: 165px;
-            &:hover {
-                background-position:-17em -6.5em;
-                cursor: pointer;
-                cursor: hand;
-            }
+            width: 156px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+            // &:hover {
+            //     background-position: -88px -588px;
+            //     cursor: pointer;
+            //     cursor: hand;
+            // }
+
+}
+
+.soundscape-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -287px -568px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+
+}
+
+.videocall-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -521px -568px;
+            background-repeat: no-repeat;
+            width: 176px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+
+}
+
+.phone-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -743px -568px;
+            background-repeat: no-repeat;
+            width: 156px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
 
 }
 

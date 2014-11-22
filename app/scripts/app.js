@@ -19,7 +19,243 @@ angular
     'ui.router'
     // 'btford.socket-io',
     // 'monospaced.qrcode'
-  ]).config(function ($routeProvider) { //stateProvider
+  ]).factory('Data', function () {
+
+    var exhibit = {
+        objects : [
+              {
+                idkey: '0', 
+                title:  'The Potlatch',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 4,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '1', 
+                title:  'The Wedding Ceremony',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '2', 
+                title:  'The Hunt',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '3', 
+                title:  'Carving Wooden Masks',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '4', 
+                title:  'The Whale Hunt',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '5', 
+                title:  'Haida Manga',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '6', 
+                title:  'Raven And Eagle',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '7', 
+                title:  'The Forest',
+                description: 'title',
+                mapid : 0,
+                media : {
+                  coverimage : '1.jpg',
+                  slideshowimages :   [
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              },
+                              {
+                                filename: '1.jpg',
+                                caption: 'caption',
+                                description : 'image description'
+
+                              }
+                            ],
+                  video: 'video.mp4',
+                  audio: 'audio.mp3'
+                },
+                likes : 0,
+                relatedobjects : [0,1,2]
+              }
+
+            ],
+        maplocations :  [
+                  {
+                    title     : 'title',
+                    description : 'description',
+                    headerimage : 'mapimage.jpg',
+                    iconimage   : 'iconimage.png',
+                    location  : [20,30]
+                  }
+
+
+                ]
+
+    };
+    return  exhibit;
+  }).config(function ($routeProvider) { //stateProvider
     $routeProvider
       .when('/tour', {
         templateUrl: 'views/tour.html',
@@ -29,7 +265,7 @@ angular
         templateUrl: 'views/sort.html',
         controller: 'MainCtrl'
       }) 
-      .when('/feature', {
+      .when('/feature/:featureId', {
         templateUrl: 'views/feature.html',
         controller: 'MainCtrl'
       })    
@@ -57,10 +293,10 @@ angular
         templateUrl: 'views/intro.html',
         controller: 'MainCtrl'
       })
-      .when('/', {
+      .when('/a', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      }).when('/slide', {
+      }).when('/', {
         templateUrl: 'views/slideshowtemp.html',
         controller: 'MainCtrl'
       })
