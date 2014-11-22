@@ -34,6 +34,11 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				$location.path('/feature');
 	  };
 
+	   $scope.enterVideo = function() {
+	   			
+	  			$location.path('/intro');
+	  };
+
 	  $scope.featureinit = function() {
 	  		$scope.currentObjectId = $routeParams.featureId;
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
