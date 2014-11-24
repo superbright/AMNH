@@ -129,6 +129,24 @@ ul {
   text-transform: uppercase;
 }
 
+/*----Slide Show Page Styles----*/
+
+#slide-show-page {
+  .alternate-font-header {
+    text-align: center;
+  }
+}
+
+#explore-header {
+  z-index: 5;
+  position: absolute;
+  top: 1215px;
+  left: 825px;
+  background-color: #f71919;
+  padding: 40px;
+  color: white;
+}
+
 /*----Intro Page Styles----*/
 #intro-wrapper {
   background-image: url("../images/intro_bg.png");
@@ -708,6 +726,7 @@ button {
   background-image: none;
 }
 
+/*-----------------Icon Styles-----------------*/
 .sort-icon {
 
             @include background-image-sb("iconsetgeneral", 1071px 1536px);
@@ -768,8 +787,3 @@ button {
 
 
 }
-
-#nation-page {
-  background-color: gray;
-}
-
