@@ -1,17 +1,15 @@
 <div id="nation-page" class="row content-wrapper">
-  
-
-    <ul id="featured-media" class="col-md-12 media-toggle-list">
-      <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects">
-        <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
-        <div class="media-toggle-item-header">
-          <span class="media-label">{{object.title}}</span>
-          <button type="button" id="" class="btn btn-transparent love-it">
-            <span class="icon love-icon">{{object.likes}}</span>
-          </button>
-        </div>
-      </li>                 
-    </ul>
+  <ul id="featured-media" class="col-md-12 media-toggle-list">
+    <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects">
+      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
+      <div class="media-toggle-item-header">
+        <span class="media-label">{{object.title}}</span>
+        <button type="button" id="" class="btn btn-transparent love-it">
+          <span class="icon love-icon">{{object.likes}}</span>
+        </button>
+      </div>
+    </li>                 
+  </ul>
 
   <ul class="col-md-12 main-nav">
     <li class="col-md-3 main-nav-item">
