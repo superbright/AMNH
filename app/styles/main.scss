@@ -696,9 +696,37 @@ ul {
   }
 
   .love-icon {
+    background-image: url(../images/heart-sort.png);
+    background-repeat: no-repeat;
+    background-position-y: 3px;
     font-size: 12px;
-    height: 36px;
-    width: 40px;
+    height: 39px;
+    width: 41px;
+  }
+
+  .video-icon {
+    background-image: url(../images/videos-icon.png);
+    background-repeat: no-repeat;
+    height: 34px;
+    width: 34px;
+  }
+
+  .image-icon {
+    background-image: url(../images/images-icon.png);
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 39px;
+  }
+
+  #sort-images .sort-menu-item-label {
+    margin-left: 34px;
+  }
+
+  .song-icon {
+    background-image: url(../images/songs-icon.png);
+    background-repeat: no-repeat;
+    height: 29px;
+    width: 33px;
   }
 }
 
@@ -736,8 +764,10 @@ ul {
 }
 
 .panaroma-icon {
-  height: 25px;
-  width: 45px;
+  background-image: url(../images/panaromas-icon.png);
+  background-repeat: no-repeat;
+  height: 29px;
+  width: 48px;
 }
 
 #sort-panaromas {
@@ -769,12 +799,14 @@ ul {
 }
 
 .modal-body {
-  margin: 200px auto;
+  margin: 170px auto;
   margin-bottom: 0px;
+  padding: 0;
 }
 
 .modal-footer {
   border: none;
+  padding: 0 30px 0 0;
 }
 
 .close {
