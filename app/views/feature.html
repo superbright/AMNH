@@ -1,8 +1,19 @@
 <div id="feature-page" class="row content-wrapper" data-ng-init="featureinit()">    
   <div class="col-md-9 content-wrapper">
-    <video id="feature-video" width="1922" class="col-md-12" controls><!-- Instert the video link here Igalcim -->
-      <source src="videos/bunny.mp4" type="video/mp4">
-    </video>
+    <div class="media-content-wrapper col-md-12">
+      <video id="feature-video" width="1920" controls><!-- Instert the video link here Igalcim -->
+        <source src="videos/bunny.mp4" type="video/mp4">
+      </video>
+      <div class="media-content-controls">
+        <button type="button" id="previous" class="btn btn-transparent previous">
+          <span class="icon previous-icon"></span>
+        </button>
+        <button type="button" id="next" class="btn btn-transparent next">
+          <span class="icon next-icon"></span>
+        </button>
+        <span class="media-count">1/5</span>
+      </div>
+    </div>
     <ul class="col-md-12 media-toggle-list">
       <li class="col-md-3 media-toggle-item">
         <div class="media-toggle-item-header">
