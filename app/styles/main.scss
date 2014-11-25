@@ -579,12 +579,23 @@ ul {
 }
 
 #chat-actions {
-  padding: 150px 90px 60px;
+  padding: 90px 90px 60px;
 }
 
 .person-icon, .camera-icon {
-  height: 90px;
-  width: 90px; 
+  height: 91px;
+  width: 91px;
+}
+
+.camera-icon {
+  background-image: url(../images/videochat-icon.png);
+  background-repeat: no-repeat;
+}
+
+.person-icon {
+  background-image: url(../images/person-icon.png);
+  background-repeat: no-repeat;
+  margin-left: 20px;
 }
 
 /*----The App----*/
