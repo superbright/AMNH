@@ -303,7 +303,15 @@ ul {
 }
 
 /*----Map Page----*/
-#map-page {}
+#map-page {
+  .love-icon {
+    background-image: url(../images/heart-map.png);
+    background-repeat: no-repeat;
+    background-position: 8px 6px;
+    font-size: 10px;
+  }
+}
+
 .full-screen-map {
   background-image: url(../images/map-colored.png);
   background-repeat: no-repeat;
@@ -367,13 +375,22 @@ ul {
 }
 
 .zoom-in-icon {
+  background-image: url(../images/map-zoom-in-icon.png);
+  background-repeat: no-repeat;
   margin-right: 25px;
 }
 
+.zoom-out-icon {
+  background-image: url(../images/map-zoom-out-icon.png);
+  background-repeat: no-repeat;
+}
+
 .close-icon {
-  height: 77px;
-  width: 77px;
-  margin-left: 55px;
+  background-image: url(../images/map-close-icon.png);
+  background-repeat: no-repeat;
+  margin-left: 35px;
+  height: 86px;
+  width: 86px;
 }
 
 /*----Feature Page----*/
