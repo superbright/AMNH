@@ -7,6 +7,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "igal-styles";
 /*-----------------General Styles-----------------*/
 
+.testing {
+  color: red;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -127,6 +131,30 @@ ul {
   padding-top: 32%;
   text-align: center;
   text-transform: uppercase;
+}
+
+/*----Soundscape Page Styles----*/
+
+#soundscape-page {
+  background-image: url(../images/mountain-bg.png);
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}
+
+.sound {
+  border: 1px solid white;
+  height: 300px;
+}
+
+.sound-file {
+  padding: 40px 81px;
+}
+
+.sound-controller {
+  background-image: url(../images/sound-control.png);
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  height: 25px;
 }
 
 /*----Slide Show Page Styles----*/
