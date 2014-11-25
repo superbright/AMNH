@@ -50,13 +50,10 @@ header {
 }
 
 .icon {
-  background-color: white; //remove this once icon map is in
-  border: 1px solid red; //remove this once icon map is in
   display: inline-block; 
 }
 
 .love-icon {
-  background-color: red;
   font-family: Aller-Regular;
   font-size: 14px;
   height: 45px;
@@ -103,9 +100,11 @@ ul {
   }
 
   .love-icon {
+    background-image: url(../images/heart-nation.png);
+    background-repeat: no-repeat;
     font-size: 12px;
     height: 36px;
-    width: 40px;
+    width: 41px;
   }
 }
 
@@ -128,9 +127,34 @@ ul {
   font-family: Aller-Regular;
   font-size: 30px;
   height: 50%;
+  margin-top: 80px;
   padding-top: 32%;
   text-align: center;
   text-transform: uppercase;
+}
+
+.the-app-icon {
+  background-image: url(../images/the-app-icon.png);
+  background-repeat: no-repeat;
+  background-position: 272px 20px;
+}
+
+.video-call-icon {
+  background-image: url(../images/video-call-icon.png);
+  background-repeat: no-repeat;
+  background-position: 238px 20px;
+}
+
+.soundscape-icon {
+  background-image: url(../images/soundscape-icon.png);
+  background-repeat: no-repeat;
+  background-position: 220px 20px;  
+}
+
+.sort-icon {
+  background-image: url(../images/sort-icon.png);
+  background-repeat: no-repeat;
+  background-position: 235px 20px;  
 }
 
 /*----Soundscape Page Styles----*/
@@ -837,66 +861,4 @@ button {
   background-color: white;
   color: #f71919;
   background-image: none;
-}
-
-/*-----------------Icon Styles-----------------*/
-.sort-icon {
-
-            @include background-image-sb("iconsetgeneral", 1071px 1536px);
-            background-position: -88px -568px;
-            background-repeat: no-repeat;
-            width: 156px;
-            height: 129px;
-            margin-left:230px;
-            position: absolute;
-            top:80px;
-
-            // &:hover {
-            //     background-position: -88px -588px;
-            //     cursor: pointer;
-            //     cursor: hand;
-            // }
-
-}
-
-.soundscape-icon {
-
-            @include background-image-sb("iconsetgeneral", 1071px 1536px);
-            background-position: -287px -568px;
-            background-repeat: no-repeat;
-            width: 200px;
-            height: 129px;
-            margin-left:230px;
-            position: absolute;
-            top:80px;
-
-
-}
-
-.videocall-icon {
-
-            @include background-image-sb("iconsetgeneral", 1071px 1536px);
-            background-position: -521px -568px;
-            background-repeat: no-repeat;
-            width: 176px;
-            height: 129px;
-            margin-left:230px;
-            position: absolute;
-            top:80px;
-
-
-}
-
-.phone-icon {
-
-            @include background-image-sb("iconsetgeneral", 1071px 1536px);
-            background-position: -743px -568px;
-            background-repeat: no-repeat;
-            width: 156px;
-            height: 129px;
-            margin-left:230px;
-            position: absolute;
-            top:80px;
-
-
 }

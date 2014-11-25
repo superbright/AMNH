@@ -1,0 +1,60 @@
+.sort-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -88px -568px;
+            background-repeat: no-repeat;
+            width: 156px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+            // &:hover {
+            //     background-position: -88px -588px;
+            //     cursor: pointer;
+            //     cursor: hand;
+            // }
+
+}
+
+.soundscape-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -287px -568px;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+
+}
+
+.videocall-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -521px -568px;
+            background-repeat: no-repeat;
+            width: 176px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+
+}
+
+.phone-icon {
+
+            @include background-image-sb("iconsetgeneral", 1071px 1536px);
+            background-position: -743px -568px;
+            background-repeat: no-repeat;
+            width: 156px;
+            height: 129px;
+            margin-left:230px;
+            position: absolute;
+            top:80px;
+
+
+}
