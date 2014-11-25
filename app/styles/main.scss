@@ -237,17 +237,33 @@ ul {
   }
 
   .love-icon {
+    background-image: url("../images/heart-tour.png");
+    background-repeat: no-repeat;
+    background-position-x: 1px;
     font-size: 10px;
     line-height: 27px;
     height: 27px;
     vertical-align: top;
-    width: 30px;
+    width: 32px;  
   }
 
   .text {
     padding: 0 60px;
     margin-bottom: 230px;
   }
+}
+
+.add-media-icon {
+  background-image: url("../images/add-icon.png");
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+}
+
+#add-media {
+  display: block;
+  margin: 0 auto;
+  padding-top: 85px;
 }
 
 .connection-status {
