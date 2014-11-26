@@ -1,6 +1,6 @@
 <div id="nation-page" class="row content-wrapper">
   <ul id="featured-media" class="col-md-12 media-toggle-list">
-    <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects">
+    <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects | limitTo:8">
       <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
       <div class="media-toggle-item-header">
         <span class="media-label">{{object.title}}</span>
@@ -13,23 +13,23 @@
 
   <ul class="col-md-12 main-nav">
     <li class="col-md-3 main-nav-item">
-      <div id="sort"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+      <div id="sort"  ng-click="callSection(8)" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
         <div class="nav-item-label sort-icon">Sort</div>
       </div>
 
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="soundscape"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+      <div id="soundscape" ng-click="callSection(9)" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
         <div class="nav-item-label soundscape-icon">Soundscape</div>
       </div>
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="video-call" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+      <div id="video-call" ng-click="callSection(10)" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
         <div class="nav-item-label video-call-icon">Video Call</div>
       </div>
     </li>
     <li class="col-md-3 main-nav-item">
-      <div id="the-app"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+      <div id="the-app" ng-click="callSection(11)" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
         <div class="nav-item-label the-app-icon">The App</div>
       </div>
     </li>

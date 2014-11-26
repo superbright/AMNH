@@ -21,12 +21,13 @@ angular
     // 'monospaced.qrcode'
   ]).factory('Data', function () {
 
-    var exhibit = {
+   var exhibit = {
         objects : [
               {
                 idkey: '0', 
                 title:  'The Potlatch',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -54,6 +55,7 @@ angular
                 idkey: '1', 
                 title:  'The Wedding Ceremony',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -81,6 +83,7 @@ angular
                 idkey: '2', 
                 title:  'The Hunt',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -108,6 +111,7 @@ angular
                 idkey: '3', 
                 title:  'Carving Wooden Masks',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -135,6 +139,7 @@ angular
                 idkey: '4', 
                 title:  'The Whale Hunt',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -162,6 +167,7 @@ angular
                 idkey: '5', 
                 title:  'Haida Manga',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -189,6 +195,7 @@ angular
                 idkey: '6', 
                 title:  'Raven And Eagle',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -216,6 +223,7 @@ angular
                 idkey: '7', 
                 title:  'The Forest',
                 description: 'title',
+                url: '/feature/',
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
@@ -238,7 +246,34 @@ angular
                 },
                 likes : 0,
                 relatedobjects : [0,1,2]
+              },
+              {
+                idkey: '', 
+                title:  'The Forest',
+                description: 'title',
+                url: '/sort'
+              },
+              {
+                idkey: '', 
+                title:  'The Forest',
+                description: 'title',
+                url: '/soundscape'
+              },
+              {
+                idkey: '', 
+                title:  'The Forest',
+                description: 'title',
+                url: '/video-chat'
+              },
+              {
+                idkey: '', 
+                title:  'The Forest',
+                description: 'title',
+                url: '/the-app'
               }
+
+
+
 
             ],
         maplocations :  [
