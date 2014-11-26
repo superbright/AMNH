@@ -204,6 +204,11 @@ ul {
   .promo-title {
     text-align: center; 
   }  
+
+  &:hover {
+    background-color:white;
+    color: #f71919;
+  }
 }
 
 /*----Tour Page Styles----*/

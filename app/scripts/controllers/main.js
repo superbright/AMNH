@@ -29,19 +29,27 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  $scope.callSection = function(id) {
 	  			$scope.currentObjectId = id;
 	  			$scope.currentObject = $scope.exhibit.objects[id];
-	  			console.log($scope.currentObject);
-	  			// change the path
-				$location.path('/feature');
+	  			$location.path($scope.currentObject.url + $scope.currentObject.idkey);
 	  };
 
-	   $scope.enterVideo = function() {
+	  $scope.enterVideo = function() {
 	   			
 	  			$location.path('/intro');
+	  };
+
+	  $scope.enterNavigation = function() {
+
+	  			$location.path('/nation');
 	  };
 
 	  $scope.featureinit = function() {
 	  		$scope.currentObjectId = $routeParams.featureId;
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
+	  };
+
+	  $scope.getMap = function(id) {
+	  			console.log('get map ' + id);
+	  			$location.path('/map');
 	  };
 
 	  $scope.exhibit = {
@@ -50,6 +58,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '0', 
 				  			title: 	'The Potlatch',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -77,6 +86,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '1', 
 				  			title: 	'The Wedding Ceremony',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -104,6 +114,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '2', 
 				  			title: 	'The Hunt',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -131,6 +142,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '3', 
 				  			title: 	'Carving Wooden Masks',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -158,6 +170,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '4', 
 				  			title: 	'The Whale Hunt',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -185,6 +198,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '5', 
 				  			title: 	'Haida Manga',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -212,6 +226,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '6', 
 				  			title: 	'Raven And Eagle',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -239,6 +254,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			idkey: '7', 
 				  			title: 	'The Forest',
 				  			description: 'title',
+				  			url: '/feature/',
 				  			mapid	: 0,
 				  			media : {
 				  				coverimage : '1.jpg',
@@ -261,7 +277,34 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				  			},
 				  			likes : 0,
 				  			relatedobjects : [0,1,2]
+					  	},
+					  	{
+					  		idkey: '', 
+				  			title: 	'The Forest',
+				  			description: 'title',
+				  			url: '/sort'
+					  	},
+					  	{
+					  		idkey: '', 
+				  			title: 	'The Forest',
+				  			description: 'title',
+				  			url: '/soundscape'
+					  	},
+					  	{
+					  		idkey: '', 
+				  			title: 	'The Forest',
+				  			description: 'title',
+				  			url: '/video-chat'
+					  	},
+					  	{
+					  		idkey: '', 
+				  			title: 	'The Forest',
+				  			description: 'title',
+				  			url: '/the-app'
 					  	}
+
+
+
 
 		  			],
 		  	maplocations : 	[
@@ -288,19 +331,55 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
   //  		 $scope.connected = true;
   //   });
 
-  }).controller('headerController', function ($rootScope, $scope, $routeParams,Data) {
+  }).controller('headerController', function ($rootScope, $scope, $routeParams,Data,$location) {
         //If you want to use URL attributes before the website is loaded
         $scope.currentFeatureId = 1;
         $scope.currentFeature = {};
+        $scope.isLanding = true;
         $rootScope.$on('$routeChangeSuccess', function () {
-            console.log($routeParams.featureId);
+        	var size = Object.size($routeParams);
+            console.log($routeParams);
+            if(size > 0 ) {
+            	$scope.isLanding = false;
+            } else {
+            	$scope.isLanding = true;
+            }
             if($routeParams.featureId) {
-            	 console.log($routeParams.featureId);
-            	 $scope.currentFeatureId = $routeParams.featureId;
+            	 $scope.currentFeatureId = Number($routeParams.featureId);
             	 $scope.currentFeature = Data.objects[$routeParams.featureId];
-            	 console.log($scope.currentFeature);
             }
         });
+
+        $scope.goNext = function() {
+        	console.log(Data.objects.length);
+        	if($scope.currentFeatureId < Data.objects.length-5) {
+	        	$scope.currentFeatureId++;
+	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
+	        	console.log(($scope.currentFeature.url + $scope.currentFeature.idkey));
+	        	$location.path($scope.currentFeature.url + $scope.currentFeature.idkey);
+	        }
+
+        };
+
+        $scope.goPrev = function() {
+
+        	if($scope.currentFeatureId > 0) {
+	        	$scope.currentFeatureId--;
+	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
+	        	$location.path($scope.currentFeature.url + $scope.currentFeature.idkey);
+        	}
+        };
+
+        Object.size = function(obj) {
+		    var size = 0, key;
+		    for (key in obj) {
+		        if (obj.hasOwnProperty(key)) {
+		        	size++;
+		        }
+		    }
+		    return size;
+		};
+
     }).directive('slider', function($timeout) {
   return {
     restrict: 'AE',
@@ -315,13 +394,9 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 		scope.next = function() {
 
 			if(scope.currentIndex < (scope.images.length-1)) {
-
 				scope.currentIndex++;
-
 			} else {
-			
 				scope.currentIndex=0;
-
 			}
 		};
 		
