@@ -1,9 +1,27 @@
 <div id="feature-page" class="row content-wrapper" data-ng-init="featureinit()">    
   <div class="col-md-9 content-wrapper">
     <div class="media-content-wrapper col-md-12">
-      <video id="feature-video" width="1920" controls><!-- Instert the video link here Igalcim -->
-        <source src="videos/bunny.mp4" type="video/mp4">
-      </video>
+
+    <videogular vg-theme="config.theme">
+      <vg-video vg-src="config.sources">
+      </vg-video>
+      <vg-controls>
+        <vg-play-pause-button></vg-play-pause-button>
+        <vg-timedisplay>{{ currentTime | date:'mm:ss' }}</vg-timedisplay>
+        <vg-scrubBar>
+          <vg-scrubbarcurrenttime></vg-scrubbarcurrenttime>
+        </vg-scrubBar>
+        <vg-timedisplay>{{ timeLeft | date:'mm:ss' }}</vg-timedisplay>
+        <vg-volume>
+          <vg-mutebutton></vg-mutebutton>
+          <vg-volumebar></vg-volumebar>
+        </vg-volume>
+        <vg-fullscreenButton></vg-fullscreenButton>
+      </vg-controls>
+ 
+      <vg-overlay-play></vg-overlay-play>
+    </videogular>
+     
       <div class="media-content-controls">
         <button type="button" id="previous" class="btn btn-transparent previous">
           <span class="icon previous-icon"></span>

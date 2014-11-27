@@ -16,7 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'com.2fdevs.videogular',
+    'com.2fdevs.videogular.plugins.controls'
     // 'btford.socket-io',
     // 'monospaced.qrcode'
   ]).factory('Data', function () {
