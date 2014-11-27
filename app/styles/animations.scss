@@ -5,6 +5,56 @@
           animation-fill-mode: both;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  -webkit-animation-name: blink;
+          animation-name: blink;
+}
+
+@keyframes scaleUpFromCenter {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+  }
+}
+
+.scaleUpFromCenter {
+  -webkit-animation-name: scaleUpFromCenter;
+          animation-name: scaleUpFromCenter;
+}
+
+
 @keyframes scaleUpFromLeft {
   0% {
     opacity: 0;
@@ -27,20 +77,151 @@
 }
 
 .delay-1x {
+  -webkit-animation-delay: 0.25s; /* Chrome, Safari, Opera */
+  animation-delay: 0.25s;
+}
+
+.delay-2x {
   -webkit-animation-delay: 0.5s; /* Chrome, Safari, Opera */
   animation-delay: 0.5s;
 }
 
-.delay-2x {
+.delay-3x {
+  -webkit-animation-delay: 0.75s; /* Chrome, Safari, Opera */
+  animation-delay: 0.75s;
+}
+
+.delay-4x {
   -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
   animation-delay: 1s;
 }
 
-.delay-3x {
-  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
-  animation-delay: 1.5s;
+.delay-5x {
+  -webkit-animation-delay: 1.25s; /* Chrome, Safari, Opera */
+  animation-delay: 1.25s;
 }
 
+.delay-6x {
+  -webkit-animation-delay: 1.50s; /* Chrome, Safari, Opera */
+  animation-delay: 1.50s;
+}
+
+.delay-7x {
+  -webkit-animation-delay: 1.75s; /* Chrome, Safari, Opera */
+  animation-delay: 1.75s;
+}
+
+.delay-8x {
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+  animation-delay: 2s;
+}
+
+.delay-9x {
+  -webkit-animation-delay: 2.25s; /* Chrome, Safari, Opera */
+  animation-delay: 2.25s;
+}
+
+.delay-10x {
+  -webkit-animation-delay: 2.50s; /* Chrome, Safari, Opera */
+  animation-delay: 2.50s;
+}
+
+.delay-11x {
+  -webkit-animation-delay: 2.75s; /* Chrome, Safari, Opera */
+  animation-delay: 2.75s;
+}
+
+.delay-12x {
+  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
+  animation-delay: 3s;
+}
+
+.delay-13x {
+  -webkit-animation-delay: 3.25s; /* Chrome, Safari, Opera */
+  animation-delay: 3.25s;
+}
+
+.delay-14x {
+  -webkit-animation-delay: 3.50s; /* Chrome, Safari, Opera */
+  animation-delay: 3.50s;
+}
+
+.delay-15x {
+  -webkit-animation-delay: 3.75s; /* Chrome, Safari, Opera */
+  animation-delay: 3.75s;
+}
+
+.delay-16x {
+  -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
+  animation-delay: 4s;
+}
+
+.delay-17x {
+  -webkit-animation-delay: 4.25s; /* Chrome, Safari, Opera */
+  animation-delay: 4.25s;
+}
+
+.delay-18x {
+  -webkit-animation-delay: 4.50s; /* Chrome, Safari, Opera */
+  animation-delay: 4.50s;
+}
+
+.delay-19x {
+  -webkit-animation-delay: 4.75s; /* Chrome, Safari, Opera */
+  animation-delay: 4.75s;
+}
+
+.delay-20x {
+  -webkit-animation-delay: 5s; /* Chrome, Safari, Opera */
+  animation-delay: 5s;
+}
+
+.delay-21x {
+  -webkit-animation-delay: 5.25s; /* Chrome, Safari, Opera */
+  animation-delay: 5.25s;
+}
+
+.delay-22x {
+  -webkit-animation-delay: 5.50s; /* Chrome, Safari, Opera */
+  animation-delay: 5.50s;
+}
+
+.delay-23x {
+  -webkit-animation-delay: 5.75s; /* Chrome, Safari, Opera */
+  animation-delay: 5.75s;
+}
+
+.delay-24x {
+  -webkit-animation-delay: 6s; /* Chrome, Safari, Opera */
+  animation-delay: 6s;
+}
+
+.delay-25x {
+  -webkit-animation-delay: 6.25s; /* Chrome, Safari, Opera */
+  animation-delay: 6.25s;
+}
+
+.delay-26x {
+  -webkit-animation-delay: 6.50s; /* Chrome, Safari, Opera */
+  animation-delay: 6.50s;
+}
+
+.delay-27x {
+  -webkit-animation-delay: 6.75s; /* Chrome, Safari, Opera */
+  animation-delay: 6.75s;
+}
+
+.delay-28x {
+  -webkit-animation-delay: 7s; /* Chrome, Safari, Opera */
+  animation-delay: 7s;
+}
 
 /*-----------------Customized Animations-----------------*/
+
+.blink-3x {
+    -webkit-animation: blink 1s;  /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 3;  /* Chrome, Safari, Opera */
+    animation: blink 1s;
+    animation-iteration-count: 3;
+}
 
