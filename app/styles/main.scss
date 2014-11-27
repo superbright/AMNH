@@ -5,6 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import "helpers";
 @import "igal-styles";
+@import "animations";
 /*-----------------General Styles-----------------*/
 
 .testing {
@@ -733,7 +734,7 @@ ul {
   margin: 0;
 }
 
-#promo-video {
+.animation-wrapper {
   margin-left: 575px;
 }
 
