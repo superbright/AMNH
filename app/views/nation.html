@@ -1,6 +1,6 @@
 <div id="nation-page" class="row content-wrapper">
   <ul id="featured-media" class="col-md-12 media-toggle-list">
-    <li class="col-md-3 media-toggle-item" ng-repeat="object in exhibit.objects | limitTo:8">
+    <li class="col-md-3 media-toggle-item animated scaleUpFromCenter" ng-repeat="object in exhibit.objects | limitTo:8">
       <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
       <div class="media-toggle-item-header">
         <span class="media-label">{{object.title}}</span>
@@ -11,7 +11,7 @@
     </li>                 
   </ul>
 
-  <ul class="col-md-12 main-nav">
+  <ul class="col-md-12 main-nav animated moveInUp delay-2x">
     <li class="col-md-3 main-nav-item">
       <div id="sort"  ng-click="callSection(8)" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
         <div class="nav-item-label sort-icon">Sort</div>
