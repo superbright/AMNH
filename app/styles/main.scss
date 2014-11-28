@@ -88,6 +88,26 @@ ul {
   list-style: none;
 }
 
+/*-----------------Videogular Controls-----------------*/
+
+.container {
+  videogular {
+    vg-controls {
+      #custom-play-pause-ui {
+        border: 8px solid white;
+        border-radius: 50%;
+        font-size: 75px;
+        height: 130px;    
+        width: 130px;
+      }
+      #controls-container {
+        background-color: white;
+        height: 5px;
+      }
+    }
+  }
+} //I had to wrap this in container class to overwrite the styles in viseoguler.css
+
 /*-----------------Contextual Page Styles-----------------*/
 
 /*Nation Page Styles*/
@@ -473,6 +493,13 @@ ul {
     height: 32px;
     width: 38px;
   }
+
+  #custom-play-pause-ui {
+    position: absolute;
+    bottom: 550px;
+    left: 945px;
+    font-size: 75px;
+  }
 }
 
 .previous-icon {
@@ -504,8 +531,8 @@ ul {
 
 .media-content-controls {
   position: absolute;
-  top: 1015px;
-  left: 1736px;
+  top: 960px;
+  left: 1720px;
 }
 
 .pagination-control {
