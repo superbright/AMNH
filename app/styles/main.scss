@@ -343,10 +343,21 @@ ul {
   background-image: url("../images/intro_bg.png");
   background-repeat: no-repeat;
   height: 100%;
+
+  videogular {
+    height: 1080px;
+    margin: 0 auto;
+    width: 1922px;
+
+    #custom-play-pause-ui {
+      position: absolute;
+      bottom: 500px;
+      left: 914px;
+    }
+  }
 }
 
-#intro-video {
-  display: block; 
+.video-wrapper {
   margin: 0 auto;
   padding-top: 165px;
 }
