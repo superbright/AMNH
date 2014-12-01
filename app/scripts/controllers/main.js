@@ -8,12 +8,14 @@
  * Controller of the KioskApp
  * mySocket
  */
-angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce) {
+angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce,ngAudio) {
     
     $scope.markeron = true;
     $scope.connected = false;
     $scope.currentObjectId = 0;
     $scope.currentObject = {};
+
+    $scope.sound001 = ngAudio.load('sounds/dummy.mp3');
 
      $scope.images = [{
 	    src: 'images/image1.jpg',
@@ -56,9 +58,13 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
 	  };
 
+	  $scope.soundinit = function() {
+	  		$scope.sound001.play();
+	  };
+
 	  $scope.getMap = function(id) {
 	  			console.log('get map ' + id);
-	  			$location.path('#/map');
+	  			$location.path('/map');
 	  };
 
 	  $scope.exhibit = {

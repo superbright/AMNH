@@ -1,7 +1,8 @@
-<div id="soundscape-page" class="row content-wrapper">
+<div id="soundscape-page" class="row content-wrapper" data-ng-init="soundinit()">
   <div class="col-md-3 sound-file">
     <div class="sound"></div>
-    <div class="sound-controller"></div>
+    <!-- <div class="sound-controller"></div> -->
+    <input class='form-control' type=range min=0 max=1 step=0.01 ng-model='sound001.volume'>
   </div>
   <div class="col-md-3 sound-file">
     <div class="sound"></div>

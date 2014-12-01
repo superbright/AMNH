@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'ui.router',
     'com.2fdevs.videogular',
-    'com.2fdevs.videogular.plugins.controls'
+    'com.2fdevs.videogular.plugins.controls',
+    'ngAudio'
     // 'btford.socket-io',
     // 'monospaced.qrcode'
   ]).factory('Data', function () {
