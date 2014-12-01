@@ -53,6 +53,12 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  			$location.url('nation');
 	  };
 
+	  $scope.maininit = function() {
+
+	  			$scope.currentObject = {};
+
+	  };
+
 	  $scope.featureinit = function() {
 	  		$scope.currentObjectId = $routeParams.featureId;
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
@@ -366,6 +372,8 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
             if($routeParams.featureId) {
             	 $scope.currentFeatureId = Number($routeParams.featureId);
             	 $scope.currentFeature = Data.objects[$routeParams.featureId];
+            } else {
+            	$scope.currentFeature = {};
             }
         });
 

@@ -29,6 +29,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/videogular/videogular.js',
       'bower_components/videogular-controls/controls.js',
+      'bower_components/angular-audio/app/angular.audio.js',
       'app/scripts/**/*.js',
       // 'test/mock/**/*.js',
       'test/spec/**/*.js'
