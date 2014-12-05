@@ -488,6 +488,10 @@ filter: blur(4px);
     background-position: 8px 6px;
     font-size: 10px;
   }
+
+  .close-icon {
+    margin-left: 35px;
+  }
 }
 
 .full-screen-map {
@@ -566,11 +570,59 @@ filter: blur(4px);
 .close-icon {
   background-image: url(../images/map-close-icon.png);
   background-repeat: no-repeat;
-  position: relative;
-  right: 45px;
-  bottom: 10px;
   height: 86px;
   width: 86px;
+}
+
+a.pin {
+  background-image: url(../images/pin.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 37px;
+  height: 73px;
+  position: absolute;
+  top: 200px;
+}
+
+a.pin:hover,
+a.pin:active,
+a.pin.active {
+  background-image: url(../images/pin-selected.png);
+  background-repeat: no-repeat;
+}
+
+a.pin span {
+  position: absolute;
+  color: #FFFFFF;
+  background: #020202;
+  text-align: center;
+  border-radius: 0px;
+  padding: 16px;
+  width: 270px;
+  font-size: 24px;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+a.pin span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-left: 8px solid #020202;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+a:hover.pin span {
+  visibility: visible;
+  opacity: 0.8;
+  right: 100%;
+  top: 50%;
+  margin-top: -15.5px;
+  margin-right: 15px;
+  z-index: 999;
 }
 
 /*----Feature Page----*/
@@ -1078,6 +1130,12 @@ filter: blur(4px);
 
 .modal {
   width: 2560px;
+
+  .close-icon {
+    position: relative;
+    right: 45px;
+    bottom: 10px;
+  }
 }
 
 .modal-body {
