@@ -207,8 +207,10 @@ ul {
 }
 
 .sound {
-  border: 1px solid white;
-  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+    height: 300px;
 }
 
 .sound-file {
@@ -222,7 +224,53 @@ ul {
   height: 25px;
 }
 
+.wave {
+  background-image: url(../images/wave.png);
+}
 
+.rain {
+  background-image: url(../images/rain.png);
+}
+
+.wind{
+  background-image: url(../images/wind.png);
+}
+
+.half-wave {
+  background-image: url(../images/half-wave.png);
+}
+
+.bird {
+  background-image: url(../images/bird.png);
+}
+
+.seal {
+  background-image: url(../images/seal.png);
+}
+
+.tale {
+  background-image: url(../images/tale.png);
+}
+
+.bear {
+  background-image: url(../images/bear.png);
+}
+
+.bottle {
+  background-image: url(../images/bottle.png);
+}
+
+.animal {
+  background-image: url(../images/animal.png);
+}
+
+.parrot{
+  background-image: url(../images/parrot.png);
+}
+
+.drum {
+  background-image: url(../images/drum.png);
+}
 /*----Slide Show Page Styles----*/
 
 #slide-show-page {
