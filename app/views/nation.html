@@ -1,7 +1,7 @@
-<div id="nation-page" class="row content-wrapper" data-ng-init="maininit()">>
+<div id="nation-page" class="row content-wrapper" data-ng-init="maininit()">
   <ul id="featured-media" class="col-md-12 media-toggle-list">
-    <li class="col-md-3 media-toggle-item animated scaleUpFromCenter" ng-repeat="object in exhibit.objects | limitTo:8">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
+    <li class="col-md-3 media-toggle-item animated scaleUpFromCenter" ng-repeat="object in exhibit.objects | limitTo:8" ng-style="{ 'animation-delay': '{{$index/10}}s'  }">
+      <div class="media-preview-image" ng-style="{ 'background-image' : 'url(images/exhibits/{{object.media.coverimagethumb}})' }" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
       <div class="media-toggle-item-header">
         <span class="media-label">{{object.title}}</span>
         <button type="button" id="" class="btn btn-transparent love-it">

@@ -18,10 +18,12 @@ body {
 } // Space out content a bit
 
 .container {
-  height: 1440px;
+  height: 1420px;
   margin: 0;
   padding: 0;
-  width: 2560px;  
+  width: 2540px;  
+  overflow: hidden;
+
 } // Size of the kiosk display
 
 header {
@@ -219,7 +221,7 @@ ul {
   left: 785px;
   padding: 20px 0px;
   position: absolute;
-  top: 1255px;
+  bottom: 0px;
   width: 1000px;
   z-index: 5; 
 
@@ -344,6 +346,7 @@ ul {
   background-image: url("../images/intro_bg.png");
   background-repeat: no-repeat;
   height: 100%;
+  transition: all 2.3s ease-out;
 
   videogular {
     height: 1080px;
@@ -356,6 +359,24 @@ ul {
       left: 914px;
     }
   }
+}
+
+.animate-enter-setup {
+ transition: 1s ease-in all; /* Future Browsers */
+ 
+ /* The animation preparation code */
+ scale: 1;
+}
+ 
+/*
+ Keep in mind that you want to combine both CSS
+ classes together to avoid any CSS-specificity
+ conflicts
+*/
+.animate-intro {
+ /* The animation code itself */
+transform: scale3d(1.5, 1.5, 1.5);
+filter: blur(4px);
 }
 
 .video-wrapper {
@@ -471,6 +492,8 @@ ul {
 
   .media-preview-image {
     height: 225px;
+    background-size: 480px 270px;
+    background-position: 0 -40px;
   }
 
   .love-icon {
@@ -937,7 +960,7 @@ ul {
 }
 
 .media-preview-image {
-  background-image: url('../images/dummy.png');
+  //background-image: url('../images/dummy.png');
   height: 300px;
 }
 
@@ -1071,3 +1094,5 @@ button {
   color: #f71919;
   background-image: none;
 }
+
+
