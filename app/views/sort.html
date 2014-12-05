@@ -94,7 +94,19 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 </script>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-body" id=""></div>
+    <div class="modal-body">
+      <div class="col-md-9 media-content"></div>
+      <aside class="col-md-3 side-content animated scaleUpFromLeft">
+        <h1 class="primary-media-heading">{{currentObject.title}}</h1>
+        <p class="text">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
+        <div class="divider"></div>
+        <div class="image-caption-wrapper animated fadeInUp delay-6x">
+          <h2 class="secondary-media-heading">Image Caption</h2>
+          <p class="subtext">Whether she was as beautiful as hemlock fronds against the spring sky at sunrise or as ugly as a sea slug doesn't really matter very much to this story.</p>
+          <span class="photo-credit">Photo Credit</span>
+        </div>
+      </aside>
+    </div>
     <div class="modal-footer">
       <button type="button" id="" data-dismiss="modal" class="btn btn-transparent close">
         <span class="icon close-icon"></span>
