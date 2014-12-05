@@ -50,14 +50,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  			$location.url('intro/:video');
 	  };
 
-	  $scope.enterNavigation = function() {
 
-	  			$scope.intromenuon = false;
-	  			setTimeout(function(){ 
-	  				$location.url('nation');
-	  			}, 2200);
-	  			
-	  };
 
 	  $scope.maininit = function() {
 
@@ -97,6 +90,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         $scope.currentFeature = {};
         $scope.isLanding = true;
         $scope.isSlideshow = true;
+        $scope.isIntro = false;
         $scope.logo = 'logo.png';
         $rootScope.$on('$routeChangeSuccess', function () {
         	
@@ -108,6 +102,12 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 				$scope.isSlideshow = true;
         	} else {
         		$scope.isSlideshow = false;
+        	}
+
+        	if($location.path().indexOf('/intro') > -1) {
+        			$scope.isIntro = true;
+        	} else {
+        		$scope.isIntro = false;
         	}
           
             if(size > 0 ) {
@@ -126,12 +126,21 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
             }
         });
 
+         $scope.enterNavigation = function() {
+
+	  			console.log("enternavigation");
+	  			$scope.intromenuon = false;
+	  			setTimeout(function(){ 
+	  				$location.url('nation');
+	  			}, 100);
+	  			
+	  };
+
         $scope.goNext = function() {
         //	console.log(Data.objects.length);
         	if($scope.currentFeatureId < Data.objects.length-5) {
 	        	$scope.currentFeatureId++;
 	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
-	        	//console.log(($scope.currentFeature.url + $scope.currentFeature.idkey));
 	        	$location.url($scope.currentFeature.url + $scope.currentFeature.idkey);
 	        }
 
