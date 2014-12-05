@@ -213,6 +213,12 @@ ul {
     height: 300px;
 }
 
+.sound:hover,
+.sound:active,
+.sound.active {
+  background-color: rgba(255,255,255,0.2);
+}
+
 .sound-file {
   padding: 40px 81px;
 }
