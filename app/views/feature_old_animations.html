@@ -2,7 +2,7 @@
   <div class="col-md-9 content-wrapper">
     <div class="media-content-wrapper col-md-12">
 
-    <videogular vg-theme="config.theme" class="animated appear delay-2x">
+    <videogular vg-theme="config.theme" class="animated scaleUpFromLeft">
       <vg-video vg-src="config.sources">
       </vg-video>
       <vg-controls>
@@ -21,7 +21,7 @@
       <vg-overlay-play></vg-overlay-play>
     </videogular>
      
-    <div class="media-content-controls">
+    <div class="media-content-controls animated appear delay-6x">
         <button type="button" id="previous" class="btn btn-transparent previous">
           <span class="icon previous-icon"></span>
         </button>
@@ -31,7 +31,7 @@
         <span class="media-count">1/5</span>
       </div>
     </div>
-    <ul class="col-md-12 media-toggle-list animated appear">
+    <ul class="col-md-12 media-toggle-list animated scaleUpFromLeft">
       <li class="col-md-3 media-toggle-item">
         <div class="media-toggle-item-header" >
           <span class="media-label">video</span>
@@ -39,21 +39,21 @@
         </div>
         <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-style="{ 'background-image' : 'url(images/exhibits/{{currentObject.media.coverimagethumb}})' }"></div>
       </li>
-      <li class="col-md-3 media-toggle-item">
+      <li class="col-md-3 media-toggle-item animated scaleUpFromLeft delay-1x">
         <div class="media-toggle-item-header">
           <span class="media-label">image</span>
           <span class="icon image-icon"></span>
         </div>
         <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-style="{ 'background-image' : 'url(images/exhibits/{{currentObject.media.coverimagethumb}})' }"></div>
       </li>
-      <li class="col-md-3 media-toggle-item">
+      <li class="col-md-3 media-toggle-item animated scaleUpFromLeft delay-2x">
         <div class="media-toggle-item-header">
           <span class="media-label">song</span>
           <span class="icon song-icon"></span>
         </div>
         <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-style="{ 'background-image' : 'url(images/exhibits/{{currentObject.media.coverimagethumb}})' }"></div>
       </li>
-      <li class="col-md-3 media-toggle-item">
+      <li class="col-md-3 media-toggle-item animated scaleUpFromLeft delay-3x">
         <div class="media-toggle-item-header">
           <span class="media-label">album</span>
           <span class="icon album-icon"></span>
@@ -62,24 +62,24 @@
       </li>
     </ul>
   </div>
-  <aside class="col-md-3 side-content animated appear">
-    <h1 class="primary-media-heading animated appear delay-4x">{{currentObject.title}}</h1>
-    <p class="text animated appear animated appear delay-6x">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
-    <div class="divider animated appearanimated appear delay-7x"></div>
-    <div class="image-caption-wrapper animated fadeInUp delay-8x">
+  <aside class="col-md-3 side-content animated scaleUpFromLeft">
+    <h1 class="primary-media-heading">{{currentObject.title}}</h1>
+    <p class="text">Before there was anything, before the great flood had covered the earth and receded, before the animals walked the earth or the trees covered the land or the birds flew between the trees, even before the fish and the whales and seals swam in the sea, an old man llived in a house on the bank of a river with his only child, a daughter.</p>
+    <div class="divider"></div>
+    <div class="image-caption-wrapper animated fadeInUp delay-6x">
       <h2 class="secondary-media-heading">Image Caption</h2>
       <p class="subtext">Whether she was as beautiful as hemlock fronds against the spring sky at sunrise or as ugly as a sea slug doesn't really matter very much to this story.</p>
       <span class="photo-credit">Photo Credit</span>
     </div>
     <ul class="horizontal-list">
       <li class="horizontal-list-item">
-        <button ng-click='getMap(0)' type="button" id="see-on-map" class="btn btn-transparent animated appear delay-10x">
+        <button ng-click='getMap(0)' type="button" id="see-on-map" class="btn btn-transparent animated appear delay-8x">
           <span class="icon map-icon"></span>
           <span class="button-label">see it on the map</span>
         </button>
       </li>
       <li class="horizontal-list-item">
-        <button type="button" id="love-it" class="btn btn-transparent animated appear delay-11x">
+        <button type="button" id="love-it" class="btn btn-transparent">
           <span class="icon love-icon">100K</span> <!-- Igalcim you will insert the love count here  -->       
           <span class="button-label">love it</span>
         </button>
