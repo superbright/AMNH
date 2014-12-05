@@ -1,6 +1,6 @@
-<div id="intro-wrapper">
+<div id="intro-wrapper" ng-class="{'animate-intro': !intromenuon}">
   <div class="video-wrapper">
-	<videogular vg-theme="config.theme" class="">
+	<videogular vg-theme="config.theme" class="" ng-if='intromenuon'>
 	  <vg-video vg-src="config.sources">
 	  </vg-video>
 	  <vg-controls vg-autohide='config.autohide' vg-autohide-time='config.autohideTime'>
