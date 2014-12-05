@@ -675,7 +675,7 @@ filter: blur(4px);
   font-size: 30px;
   color: #FFFFFF;
   line-height: 36px;
-  margin-bottom: 160px;
+  margin-bottom: 50px;
 }
 
 .divider {
@@ -731,6 +731,14 @@ filter: blur(4px);
 .album-icon {
   height: 21px;
   width: 31px;
+}
+
+.photo-credit {
+  font-size: 30px;
+  font-family: Aller-Italic;
+  margin-bottom: 100px;
+  display: inline-block;
+  color: white;
 }
 
 /*----Video Chat Page----*/
