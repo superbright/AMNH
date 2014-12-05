@@ -227,6 +227,7 @@ ul {
 
 #slide-show-page {
   .alternate-font-header {
+    position: relative;
     text-align: center;
   }
 }
@@ -237,7 +238,7 @@ ul {
   left: 785px;
   padding: 20px 0px;
   position: absolute;
-  bottom: 0px;
+  top: 1143px;
   width: 1000px;
   z-index: 5; 
 
