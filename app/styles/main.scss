@@ -566,7 +566,9 @@ filter: blur(4px);
 .close-icon {
   background-image: url(../images/map-close-icon.png);
   background-repeat: no-repeat;
-  margin-left: 35px;
+  position: relative;
+  right: 45px;
+  bottom: 10px;
   height: 86px;
   width: 86px;
 }
@@ -1065,30 +1067,39 @@ filter: blur(4px);
 
 /*-----------------Modal Styles-----------------*/
 /*----Sort Page Modal----*/
-.modal-body {
+.media-content{
   background-image: url(../images/video-dummy.png);
   background-repeat: no-repeat;
   height: 1157px;
-  width: 1920px;
+  width: 1902px;
+  padding: 0;
+  margin: 170px 0 0 0;
 }
 
 .modal {
   width: 2560px;
 }
 
-.modal-dialog {
-  width: 100%;
+.modal-body {
+  padding: 0;
+  margin: 0;
 }
 
-.modal-body {
-  margin: 170px auto;
-  margin-bottom: 0px;
+.modal-dialog {
+  width: 100%;
   padding: 0;
+  margin: 0;
+
+  .side-content {
+    margin-top: 170px;
+    height: 1084px;
+    margin-bottom: 68px;
+  }
 }
 
 .modal-footer {
   border: none;
-  padding: 0 30px 0 0;
+  padding: 0;
 }
 
 .close {
