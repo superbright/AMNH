@@ -8,12 +8,14 @@
  * Controller of the KioskApp
  * mySocket
  */
-angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce,ngAudio) {
+angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce,ngAudio,Data) {
     
+    $scope.intromenuon = true;
     $scope.markeron = true;
     $scope.connected = false;
     $scope.currentObjectId = 0;
     $scope.currentObject = {};
+    $scope.imageurl = '../images/dummy.png';
 
     $scope.sound001 = ngAudio.load('sounds/dummy.mp3');
 
@@ -45,12 +47,16 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 
 	  $scope.enterVideo = function() {
 	   			
-	  			$location.url('intro');
+	  			$location.url('intro/:video');
 	  };
 
 	  $scope.enterNavigation = function() {
 
-	  			$location.url('nation');
+	  			$scope.intromenuon = false;
+	  			setTimeout(function(){ 
+	  				$location.url('nation');
+	  			}, 2200);
+	  			
 	  };
 
 	  $scope.maininit = function() {
@@ -73,274 +79,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  			$location.path('/map');
 	  };
 
-	  $scope.exhibit = {
-	  		objects : [
-				  		{
-				  			idkey: '0', 
-				  			title: 	'The Potlatch',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 4,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '1', 
-				  			title: 	'The Wedding Ceremony',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '2', 
-				  			title: 	'The Hunt',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '3', 
-				  			title: 	'Carving Wooden Masks',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '4', 
-				  			title: 	'The Whale Hunt',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '5', 
-				  			title: 	'Haida Manga',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '6', 
-				  			title: 	'Raven And Eagle',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-				  			idkey: '7', 
-				  			title: 	'The Forest',
-				  			description: 'title',
-				  			url: '/feature/',
-				  			mapid	: 0,
-				  			media : {
-				  				coverimage : '1.jpg',
-				  				slideshowimages : 	[
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										},
-				  										{
-				  											filename: '1.jpg',
-				  											caption: 'caption',
-				  											description : 'image description'
-
-				  										}
-				  									],
-				  				video: 'video.mp4',
-				  				audio: 'audio.mp3'
-				  			},
-				  			likes : 0,
-				  			relatedobjects : [0,1,2]
-					  	},
-					  	{
-					  		idkey: '', 
-				  			title: 	'The Forest',
-				  			description: 'title',
-				  			url: '/sort'
-					  	},
-					  	{
-					  		idkey: '', 
-				  			title: 	'The Forest',
-				  			description: 'title',
-				  			url: '/soundscape'
-					  	},
-					  	{
-					  		idkey: '', 
-				  			title: 	'The Forest',
-				  			description: 'title',
-				  			url: '/video-chat'
-					  	},
-					  	{
-					  		idkey: '', 
-				  			title: 	'The Forest',
-				  			description: 'title',
-				  			url: '/the-app'
-					  	}
-
-
-
-
-		  			],
-		  	maplocations : 	[
-		  						{
-		  							title 		: 'title',
-		  							description : 'description',
-		  							headerimage : 'mapimage.jpg',
-		  							iconimage 	: 'iconimage.png',
-		  							location 	: [20,30]
-		  						}
-
-
-		  					]
-
-	  };
+	  $scope.exhibit = Data;
 
 	
 	 // mySocket.forward('ios', $scope);
@@ -357,13 +96,23 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         $scope.currentFeatureId = 1;
         $scope.currentFeature = {};
         $scope.isLanding = true;
+        $scope.isSlideshow = true;
         $scope.logo = 'logo.png';
         $rootScope.$on('$routeChangeSuccess', function () {
         	
         	var size = Object.size($routeParams);
+
+        	console.log($location.path());
+
+        	if($location.path() === '/') {
+				$scope.isSlideshow = true;
+        	} else {
+        		$scope.isSlideshow = false;
+        	}
           
             if(size > 0 ) {
             	$scope.isLanding = false;
+            	
             	$scope.logo = 'menu.png';
             } else {
             	$scope.isLanding = true;

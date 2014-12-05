@@ -20,17 +20,20 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+   
     <!-- Add your site or application content here -->
     <div class="container">
       <header ng-controller="headerController">
+      <div ng-if="!isSlideshow">
         <a href="#/nation">
           <img id="logo" ng-src="images/{{logo}}" alt="logo"/>
         </a>
-        <h1 id="page-title" class="animated appear" ng-bind-template="{{currentFeature.title}}"></h1> <!-- remove the placeholder and inject the page title in here Iglacim -->
+        <h1 id="page-title" class="animated appear" ng-bind-template="{{currentFeature.title}}"></h1>
         <div class="pagination-control" ng-if="!isLanding"> <!-- This should be hidden in general but shown when a pagination is relevant to the context --> 
           <span class="icon arrow-left" ng-click="goPrev()"></span>
           <span class="page-number"> {{currentFeatureId +1}}/8 </span> 
           <span class="icon arrow-right" ng-click="goNext()"></span>
+        </div>
         </div>
       </header>
       <div ng-view="" class="main-wrapper"></div>    
