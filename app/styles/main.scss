@@ -430,26 +430,30 @@ ul {
       left: 914px;
     }
   }
+}
 
-  .skip-wrapper {
-    float: right;
-    display: inline;
+.skip-wrapper {
+  float: right;
+  display: inline;
 
-    .skip-intro {
-      color: white;
-      font-size: 38px;
-      text-transform: uppercase;
-      position: relative;
-      top: 1px;
-      right: 55px;
-    }
-
-    .icon .arrow-right {
-      position: relative;
-      top: 17px;
-      right: 30px;
-    }
+  .skip-intro {
+    color: white;
+    font-size: 38px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1px;
+    right: 55px;
   }
+
+  .skip-icon {
+    position: relative;
+    top: 17px;
+    right: 30px;
+  }
+}
+
+.slide-show-wrapper {
+  display: inline;
 }
 
 .animate-enter-setup {
