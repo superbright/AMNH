@@ -34,6 +34,7 @@ angular
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
+                  coverimagethumb : '1_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -61,7 +62,8 @@ angular
                 url: '/feature/',
                 mapid : 0,
                 media : {
-                  coverimage : '1.jpg',
+                  coverimage : '2.jpg',
+                  coverimagethumb : '2_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -90,6 +92,7 @@ angular
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
+                  coverimagethumb : '1_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -117,7 +120,8 @@ angular
                 url: '/feature/',
                 mapid : 0,
                 media : {
-                  coverimage : '1.jpg',
+                  coverimage : '2.jpg',
+                  coverimagethumb : '2_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -146,6 +150,7 @@ angular
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
+                  coverimagethumb : '1_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -173,7 +178,8 @@ angular
                 url: '/feature/',
                 mapid : 0,
                 media : {
-                  coverimage : '1.jpg',
+                  coverimage : '2.jpg',
+                  coverimagethumb : '2_thumb.jpg',
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -202,6 +208,7 @@ angular
                 mapid : 0,
                 media : {
                   coverimage : '1.jpg',
+                  coverimagethumb : '1_thumb.jpg', 
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -229,7 +236,8 @@ angular
                 url: '/feature/',
                 mapid : 0,
                 media : {
-                  coverimage : '1.jpg',
+                  coverimage : '2.jpg',
+                  coverimagethumb : '2_thumb.jpg', 
                   slideshowimages :   [
                               {
                                 filename: '1.jpg',
@@ -327,7 +335,7 @@ angular
         templateUrl: 'views/nation.html',
         controller: 'MainCtrl'
       })
-      .when('/intro', {
+      .when('/intro/:id', {
         templateUrl: 'views/intro.html',
         controller: 'MainCtrl'
       })
