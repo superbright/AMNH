@@ -31,7 +31,46 @@ angular
   
   }).factory('Data', function () {
 
-   var exhibit = {
+   var data = {}; 
+   data.media = [ 
+                 {
+                    title:  'The Potlatch',
+                    type: 'image',
+                    filename: '1.jpg',
+                    thumbnailfilename: '1_thumb.jpg',
+                    caption: 'caption',
+                    description : 'image description',
+                    likes : 0
+                 },
+                  {
+                    title:  'The Potlatch',
+                    type: 'image',
+                    filename: '1.jpg',
+                    thumbnailfilename: '1_thumb.jpg',
+                    caption: 'caption',
+                    description : 'image description',
+                    likes : 0
+                 },
+                  {
+                    title:  'The Potlatch',
+                    type: 'video',
+                    filename: '1.jpg',
+                    thumbnailfilename: '1_thumb.jpg',
+                    caption: 'caption',
+                    description : 'image description',
+                    likes : 0
+                 },
+                  {
+                    title:  'The Potlatch',
+                    type: 'song',
+                    filename: '1.jpg',
+                    thumbnailfilename: '1_thumb.jpg',
+                    caption: 'caption',
+                    description : 'image description',
+                    likes : 0
+                 }];
+
+   data.exhibit = {
         objects : [
               {
                 idkey: '0', 
@@ -307,7 +346,7 @@ angular
                 ]
 
     };
-    return  exhibit;
+    return data;
   }).config(function ($routeProvider) { //stateProvider
     $routeProvider
       .when('/tour', {

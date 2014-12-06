@@ -24,7 +24,27 @@ body {
   width: 2540px;  
   overflow: hidden;
 
+   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+
 } // Size of the kiosk display
+
+span {
+    a {
+      outline: 0;
+    }
+}
+
+a {
+   outline: 0;
+}
+
+a:hover, a:active, a:focus {
+  // styling for any way a link is about to be used
+    outline: 0;
+}
 
 header {
   background-color: black;

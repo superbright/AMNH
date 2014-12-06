@@ -1,25 +1,25 @@
 <div id="sort-page" class="row content-wrapper">
   <div class="col-md-3 sort-menu-wrapper">
     <ul id="sort-menu">
-      <li class="sort-menu-item" id="sort-videos">
+      <li class="sort-menu-item" id="sort-videos" model="sortFilter" ng-click="sortFilter = 'video'">
         <div class="sort-menu-item-wrapper">
           <span class="icon video-icon"></span>
           <span class="sort-menu-item-label">videos</span>
         </div>
       </li>
-      <li class="sort-menu-item animated appear delay-1x" id="sort-images">
+      <li class="sort-menu-item animated appear delay-1x" id="sort-images" model="sortFilter" ng-click="sortFilter = 'image'">
         <div class="sort-menu-item-wrapper">
           <span class="icon image-icon"></span>
           <span class="sort-menu-item-label">images</span>
         </div>
       </li>
-      <li class="sort-menu-item animated appear delay-2x" id="sort-panaromas">
+      <li class="sort-menu-item animated appear delay-2x" id="sort-panaromas" model="sortFilter" ng-click="sortFilter = 'panaroma'">
         <div class="sort-menu-item-wrapper">
           <span class="icon panaroma-icon"></span>
           <span class="sort-menu-item-label">panaromas</span>
         </div>
       </li>
-      <li class="sort-menu-item animated appear delay-3x" id="sort-songs">
+      <li class="sort-menu-item animated appear delay-3x" id="sort-songs" model="sortFilter" ng-click="sortFilter = 'song'">
         <div class="sort-menu-item-wrapper">
           <span class="icon song-icon"></span>
           <span class="sort-menu-item-label">songs</span>
@@ -28,60 +28,15 @@
     </ul>
   </div>
   <ul class="col-md-9 media-toggle-list">
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-1x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
+     <li class="col-md-4 media-toggle-item" model="sortFilter" ng-repeat="object in media | filter: {type: sortFilter}" ng-style="{ 'animation-delay': '{{$index/10}}s'  }">
+      <div class="media-preview-image" ng-style="{ 'background-image' : 'url(images/exhibits/{{object.thumbnailfilename}})' }" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
       <div class="media-toggle-item-header">
-        <span class="media-label">The Potlatch</span>
+        <span class="media-label">{{object.title}}</span>
         <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">2.4K</span>
+          <span class="icon love-icon">{{object.likes}}</span>
         </button>
       </div>
-    </li>
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-2x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Wedding Ceremony</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-3x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Hunt</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-4x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">The Whale Hunt</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">2.4K</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-5x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">Haida Manga</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>
-    <li class="col-md-4 media-toggle-item animated scaleUpFromCenter delay-6x">
-      <div class="media-preview-image" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"></div>
-      <div class="media-toggle-item-header">
-        <span class="media-label">Raven and Eagle</span>
-        <button type="button" id="" class="btn btn-transparent love-it">
-          <span class="icon love-icon">10</span>
-        </button>
-      </div>
-    </li>          
+    </li>             
   </ul>
 </div>
 <script type="text/javascript">//Igalcim modal js ile trigger edildiginden gormek icin bunu buraya yazmak durumunda kaldim sen js filelara integrate edersin

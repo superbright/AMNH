@@ -62,18 +62,17 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  };
 
 	  $scope.featureinit = function() {
-	  		console.log($scope.animationState);
+	  	
 	  		$scope.currentObjectId = $routeParams.featureId;
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
-	  		//$scope.animationState++;
 	  };
 
 	  $scope.soundinit = function() {
 	  		$scope.sound001.play();
 	  };
 
-	  $scope.getMap = function(id) {
-	  			console.log('get map ' + id);
+	  $scope.getMap = function() { //id
+	  			
 	  			$location.path('/map');
 	  };
 
@@ -98,11 +97,10 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  $scope.getHeaderStyle = function(section) {
 
 	  		if(section === $scope.featureState) {
-	  			return { 'background-color': 'red' };
+	  			return { 'background-color': '#f71919' };
 	  		} else {
 	  			return '';
 	  		}
-
 	  };
 
 	  $scope.updateFeatureSection = function(section) {
@@ -156,10 +154,24 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  		} 
 	  };
 
+
+	  $scope.sortFilter = '';
+	  $scope.sortMedia = function(object,type) {
+	  			console.log(object);
+	  			if(object.type === type) {
+	  				return true;
+	  			} else {
+	  				return false;
+	  			}
+
+
+	  };
+
 	  if($location.path().indexOf('/feature') > -1) {
         			$scope.animationState++;
       } 
-	  $scope.exhibit = Data;
+	  $scope.exhibit = Data.exhibit;
+	  $scope.media = Data.media;
 
 
 
@@ -183,30 +195,42 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         $scope.isIntro = false;
         $scope.isFeature = false;
         $scope.logo = 'logo.png';
+        $scope.homeurl ='';
         $rootScope.$on('$routeChangeSuccess', function () {
         	
         	var size = Object.size($routeParams);
 
-        	console.log($location.path());
+        	//console.log($location.path());
 
         	if($location.path() === '/') {
+        		$scope.homeurl = '';
 				$scope.isSlideshow = true;
         	} else {
         		$scope.isSlideshow = false;
         	}
 
         	if($location.path().indexOf('/intro') > -1) {
-        			$scope.isIntro = true;
+        		$scope.homeurl = '';
+        		$scope.isIntro = true;
         	} else {
         		$scope.isIntro = false;
         	}
+
         	if($location.path().indexOf('/feature') > -1) {
-        			console.log(State.featureAnimationState);
+        			$scope.homeurl = 'nation';
         			State.featureAnimationState++;
         			$scope.isFeature = true;
         	} else {
         		$scope.isFeature = false;
         		State.featureAnimationState = 0;
+        	}
+
+        	if($location.path().indexOf('/nation') > -1) {
+        			$scope.homeurl = '';		
+        	}
+
+			if($location.path().indexOf('/the-app') > -1 || $location.path().indexOf('/video-chat') > -1 || $location.path().indexOf('/sound') > -1 || $location.path().indexOf('/sort') > -1) {
+        			$scope.homeurl = 'nation';		
         	}
           
             if(size > 0 ) {
@@ -235,7 +259,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  };
 
         $scope.goNext = function() {
-        //	console.log(Data.objects.length);
+       
         	if($scope.currentFeatureId < Data.objects.length-5) {
 	        	$scope.currentFeatureId++;
 	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
@@ -249,7 +273,6 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         	if($scope.currentFeatureId > 0) {
 	        	$scope.currentFeatureId--;
 	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
-	        	//console.log(($scope.currentFeature.url + $scope.currentFeature.idkey));
 	        	$location.url($scope.currentFeature.url + $scope.currentFeature.idkey);
         	}
         };
