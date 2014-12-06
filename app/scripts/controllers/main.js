@@ -8,7 +8,7 @@
  * Controller of the KioskApp
  * mySocket
  */
-angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce,ngAudio,Data) {
+angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$rootScope, $routeParams,$sce,ngAudio,Data,State) {
     
     $scope.intromenuon = true;
     $scope.markeron = true;
@@ -16,6 +16,9 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
     $scope.currentObjectId = 0;
     $scope.currentObject = {};
     $scope.imageurl = '../images/dummy.png';
+    $scope.featureState = 'video';
+	$scope.animationStateVideo = 0; // if greater than 1 then fade in
+    
 
     $scope.sound001 = ngAudio.load('sounds/dummy.mp3');
 
@@ -59,8 +62,10 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  };
 
 	  $scope.featureinit = function() {
+	  		console.log($scope.animationState);
 	  		$scope.currentObjectId = $routeParams.featureId;
 	  		$scope.currentObject = $scope.exhibit.objects[$routeParams.featureId];
+	  		//$scope.animationState++;
 	  };
 
 	  $scope.soundinit = function() {
@@ -72,7 +77,92 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  			$location.path('/map');
 	  };
 
+	 
+	  $scope.showVideo = function() {
+	  		$scope.animationStateVideo++;
+	  		$scope.featureState = 'video';
+	  };
+
+	  $scope.showImage = function() {
+	  		$scope.featureState = 'image';
+	  };
+
+	   $scope.showSong = function() {
+	  		$scope.featureState = 'song';
+	  };
+
+	  $scope.showSlideshow = function() {
+	  		$scope.featureState = 'slideshow';
+	  };
+
+	  $scope.getHeaderStyle = function(section) {
+
+	  		if(section === $scope.featureState) {
+	  			return { 'background-color': 'red' };
+	  		} else {
+	  			return '';
+	  		}
+
+	  };
+
+	  $scope.updateFeatureSection = function(section) {
+
+	  		if(section === $scope.featureState) {
+	  			return true;
+	  		} else {
+	  			return false;
+	  		}
+	  };
+
+	   $scope.getAnimationStyle = function() {
+	 
+	  		if(State.featureAnimationState > 1) {
+	  			return 'animated appear';
+	  		} else {
+	  			return 'animated scaleUpFromLeft';
+	  		}
+	  };
+
+	   $scope.getAnimationVideoStyle =function() {
+	   		
+
+	   	if(State.featureAnimationState > 1 || $scope.animationStateVideo > 0) {
+	  			return 'animated appear';
+	  		} else {
+	  			return 'animated scaleUpFromLeft';
+	  		}
+	   };
+
+	   $scope.getAnimationSideBarStyle = function() {
+	 
+	  		if(State.featureAnimationState > 1) {
+	  			return 'animated appear';
+	  		} else {
+	  			return 'animated scaleUpFromLeft';
+	  		}
+	  };
+
+	   $scope.getAnimationBottomStyle = function() {
+	 
+	  		if(State.featureAnimationState === 1) {
+	  			return 'animated scaleUpFromLeft';
+	  		} 
+	  };
+
+	  $scope.getAnimationContentStyle = function() {
+	 
+	  		if(State.featureAnimationState > 1) {
+	  			return 'animated appear';
+	  		} 
+	  };
+
+	  if($location.path().indexOf('/feature') > -1) {
+        			$scope.animationState++;
+      } 
 	  $scope.exhibit = Data;
+
+
+
 
 	
 	 // mySocket.forward('ios', $scope);
@@ -84,13 +174,14 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
   //  		 $scope.connected = true;
   //   });
 
-  }).controller('headerController', function ($rootScope, $scope, $routeParams,Data,$location) {
+  }).controller('headerController', function ($rootScope, $scope, $routeParams,Data,$location,State) {
         //If you want to use URL attributes before the website is loaded
         $scope.currentFeatureId = 1;
         $scope.currentFeature = {};
         $scope.isLanding = true;
         $scope.isSlideshow = true;
         $scope.isIntro = false;
+        $scope.isFeature = false;
         $scope.logo = 'logo.png';
         $rootScope.$on('$routeChangeSuccess', function () {
         	
@@ -108,6 +199,14 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         			$scope.isIntro = true;
         	} else {
         		$scope.isIntro = false;
+        	}
+        	if($location.path().indexOf('/feature') > -1) {
+        			console.log(State.featureAnimationState);
+        			State.featureAnimationState++;
+        			$scope.isFeature = true;
+        	} else {
+        		$scope.isFeature = false;
+        		State.featureAnimationState = 0;
         	}
           
             if(size > 0 ) {
@@ -128,7 +227,6 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 
          $scope.enterNavigation = function() {
 
-	  			console.log("enternavigation");
 	  			$scope.intromenuon = false;
 	  			setTimeout(function(){ 
 	  				$location.url('nation');

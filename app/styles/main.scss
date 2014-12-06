@@ -713,6 +713,20 @@ a:hover.pin span {
   position: relative;
 }
 
+.feature-content {
+  height: 1070px;
+}
+.featureImage {
+  width: 100%;
+    height: 100%;
+
+  .feature-media-image {
+    width: 100%;
+    height: 100%;
+   // background-size: 500px 500px;
+  }
+}
+
 .media-content-controls {
   position: absolute;
   top: 960px;

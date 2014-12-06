@@ -22,7 +22,14 @@ angular
     'ngAudio'
     // 'btford.socket-io',
     // 'monospaced.qrcode'
-  ]).factory('Data', function () {
+  ]).factory('State', function () {
+
+        var globalState = {};
+        globalState.featureAnimationState = 0;
+
+        return globalState;
+  
+  }).factory('Data', function () {
 
    var exhibit = {
         objects : [
