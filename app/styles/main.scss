@@ -211,6 +211,16 @@ ul {
   padding-top: 40px;
 
   input.form-control {
+    display: none;
+  }
+
+  input.form-control:focus {
+    border-color: transparent;
+  }
+
+  input.form-control:hover,
+  input.form-control:active,
+  input.form-control.active {
     border: none;
     box-shadow: none;
     display: inline-block;
@@ -220,10 +230,6 @@ ul {
     padding: 0;
   }
 
-  input.form-control:focus {
-    border-color: transparent;
-  }
-
 }
 
 .sound {
@@ -231,12 +237,13 @@ ul {
   background-size: contain;
   background-position: center;
     height: 300px;
+    opacity: 0.5;
 }
 
 .sound:hover,
 .sound:active,
 .sound.active {
-  background-color: rgba(255,255,255,0.2);
+  opacity: 1;
 }
 
 .sound-file {
