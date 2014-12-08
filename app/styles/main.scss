@@ -115,21 +115,45 @@ ul {
 .container {
   videogular {
     vg-controls {
-      #custom-play-pause-ui {
-        border: 8px solid white;
-        border-radius: 50%;
-        display: inline;
-        font-size: 75px;
-        height: 130px;    
-        width: 130px;
-      }
+      display: none;
+      //#custom-play-pause-ui {
+        //border: 8px solid white;
+        //border-radius: 50%;
+        //display: inline;
+        //font-size: 75px;
+        //height: 130px;    
+        //width: 130px;
+      //}
       #controls-container {
         background-color: rgba(255,255,255,0.5);
         opacity: 1;
       }
     }
   }
-} //I had to wrap this in container class to overwrite the styles in viseoguler.css
+} //I had to wrap this in container class to overwrite the styles in videogular.css
+
+videogular {
+  vg-overlay-play { 
+    .overlayPlayContainer {
+      .play:before {
+        content: none;
+      }
+      .iconButton {
+        font-family: none;
+      }
+      .play {
+        background-image: url(../images/play-btn.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 179px;
+        width: 179px;
+        position: relative;
+        top: 490px;
+        left: 868px;
+      }
+    }
+  }
+}
 
 /*-----------------Contextual Page Styles-----------------*/
 
@@ -446,16 +470,19 @@ ul {
   height: 1440px;
   width: 2560px;
   transition: all 2.3s ease-out;
+
   videogular {
     height: 1080px;
     margin: 0 auto;
     width: 1920px;
-    // #custom-play-pause-ui {
-    //   position: absolute;
-    //   top: 33px;
-    //   left: 914px;
-    // }
   }
+}
+
+.overlayPlayIcon {
+  background-image: url(../images/play-btn.png);
+  display: inline-block;
+  height: 179px;
+  width: 179px;
 }
 
 .skip-wrapper {
@@ -502,7 +529,7 @@ filter: blur(4px);
 
 .video-wrapper {
   margin: 0 auto;
-  padding-top: 165px;
+  padding-top: 130px;
 }
 
 #skip {
@@ -704,26 +731,26 @@ a:hover.pin span {
     width: 38px;
   }
 
-  #custom-play-pause-ui {
-    position: absolute;
-    bottom: 550px;
-    left: 945px;
-    font-size: 75px;
-  }
+  //#custom-play-pause-ui {
+   // position: absolute;
+    //bottom: 550px;
+    //left: 945px;
+    //font-size: 75px;
+  //}
 }
 
 .previous-icon {
   background-image: url(../images/previous-icon.png);
   background-repeat: no-repeat;
   height: 54px;
-  width: 38px;
+  width: 54px;
 }
 
 .next-icon {
   background-image: url(../images/next-icon.png);
   background-repeat: no-repeat;
   height: 54px;
-  width: 44px;
+  width: 54px;
 }
 
 .media-count {
@@ -756,7 +783,7 @@ a:hover.pin span {
 .media-content-controls {
   position: absolute;
   top: 960px;
-  left: 1720px;
+  left: 1690px;
 }
 
 .pagination-control {
