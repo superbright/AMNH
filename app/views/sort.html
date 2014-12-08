@@ -28,7 +28,9 @@
     </ul>
   </div>
   <ul class="col-md-9 media-toggle-list">
+
      <li  class="col-md-4 media-toggle-item repeat-item" model="sortFilter" ng-repeat="object in media | filter: {type: sortFilter}" ng-style="{ 'animation-delay': '{{$index/10}}s'  }">
+
       <div class="media-preview-image" ng-style="{ 'background-image' : 'url(images/exhibits/{{object.thumbnailfilename}})' }" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" ng-click="callSection({{object.idkey}})"></div>
       <div class="media-toggle-item-header">
         <span class="media-label">{{object.title}}</span>
