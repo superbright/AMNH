@@ -19,7 +19,6 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
     $scope.featureState = 'video';
 	$scope.animationStateVideo = 0; // if greater than 1 then fade in
     
-
     $scope.sound001 = ngAudio.load('sounds/dummy.mp3');
 
      $scope.images = [{
@@ -35,13 +34,14 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 
 	   $scope.config = {
 				sources: [
-					{src: $sce.trustAsResourceUrl('videos/bunny.mp4'), type: 'video/mp4'}
-			
+					{src: $sce.trustAsResourceUrl('videos/f1/V12_Nicoll.mp4'), type: 'video/mp4'}
 				],
-				theme: 'bower_components/videogular-themes-default/videogular.css'
-			};
+				// theme: 'bower_components/videogular-themes-default/videogular.css',
+				plugins: {
+					poster: 'videos/f1/poster.png'
+				}
+		};
 	
-
 	  $scope.callSection = function(id) {
 	  			$scope.currentObjectId = id;
 	  			$scope.currentObject = $scope.exhibit.objects[id];
@@ -49,16 +49,26 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  };
 
 	  $scope.enterVideo = function() {
-	   			
 	  			$location.url('intro/:video');
 	  };
 
+	   $scope.enterNavigation = function() {
 
+	  			$scope.intromenuon = false;
+	  			setTimeout(function(){ 
+	  				$location.url('nation');
+	  			}, 100);
+	  };
+
+	  $scope.videoSRC = function(videoFile) {
+	  			//console.log(videoFile);
+	  			return [
+					{src: $sce.trustAsResourceUrl('videos/' + videoFile), type: 'video/mp4'}
+				];
+	  };
 
 	  $scope.maininit = function() {
-
 	  			$scope.currentObject = {};
-
 	  };
 
 	  $scope.featureinit = function() {
@@ -68,7 +78,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  };
 
 	  $scope.soundinit = function() {
-	  		$scope.sound001.play();
+	  		//$scope.sound001.play();
 	  };
 
 	  $scope.getMap = function() { //id
@@ -76,7 +86,11 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  			$location.path('/map');
 	  };
 
-	 
+	  $scope.playSound = function(id) {
+	  			
+	  			console.log(id);
+	  };
+
 	  $scope.showVideo = function() {
 	  		$scope.animationStateVideo++;
 	  		$scope.featureState = 'video';
@@ -112,6 +126,8 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  		}
 	  };
 
+
+	  // STYLE REQUESTS FOR SECTIONS
 	   $scope.getAnimationStyle = function() {
 	 
 	  		if(State.featureAnimationState > 1) {
@@ -154,27 +170,12 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  		} 
 	  };
 
-
-	  $scope.sortFilter = '';
-	  $scope.sortMedia = function(object,type) {
-	  			console.log(object);
-	  			if(object.type === type) {
-	  				return true;
-	  			} else {
-	  				return false;
-	  			}
-
-
-	  };
-
+	  $scope.sortFilter = 'video';
 	  if($location.path().indexOf('/feature') > -1) {
         			$scope.animationState++;
       } 
 	  $scope.exhibit = Data.exhibit;
 	  $scope.media = Data.media;
-
-
-
 
 	
 	 // mySocket.forward('ios', $scope);
@@ -196,6 +197,9 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
         $scope.isFeature = false;
         $scope.logo = 'logo.png';
         $scope.homeurl ='';
+        $scope.skipCopy = 'Skip Introduction';
+        $scope.featurePagination = $scope.currentFeatureId +1 + '/8'; 
+
         $rootScope.$on('$routeChangeSuccess', function () {
         	
         	var size = Object.size($routeParams);
@@ -235,7 +239,6 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
           
             if(size > 0 ) {
             	$scope.isLanding = false;
-            	
             	$scope.logo = 'menu.png';
             } else {
             	$scope.isLanding = true;
@@ -243,7 +246,7 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
             }
             if($routeParams.featureId) {
             	 $scope.currentFeatureId = Number($routeParams.featureId);
-            	 $scope.currentFeature = Data.objects[$routeParams.featureId];
+            	 $scope.currentFeature = Data.exhibit.objects[$routeParams.featureId];
             } else {
             	$scope.currentFeature = {};
             }
@@ -256,15 +259,16 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 	  				$location.url('nation');
 	  			}, 100);
 	  			
-	  };
+	  	};
 
         $scope.goNext = function() {
        
-        	if($scope.currentFeatureId < Data.objects.length-5) {
+        	if($scope.currentFeatureId < Data.exhibit.objects.length-5) {
 	        	$scope.currentFeatureId++;
-	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
+	        	$scope.currentFeature = Data.exhibit.objects[$scope.currentFeatureId];
 	        	$location.url($scope.currentFeature.url + $scope.currentFeature.idkey);
 	        }
+	         $scope.featurePagination = $scope.currentFeatureId +1 + '/8'; 
 
         };
 
@@ -272,9 +276,10 @@ angular.module('KioskApp').controller('MainCtrl', function ($scope, $location,$r
 
         	if($scope.currentFeatureId > 0) {
 	        	$scope.currentFeatureId--;
-	        	$scope.currentFeature = Data.objects[$scope.currentFeatureId];
+	        	$scope.currentFeature = Data.exhibit.objects[$scope.currentFeatureId];
 	        	$location.url($scope.currentFeature.url + $scope.currentFeature.idkey);
         	}
+        	 $scope.featurePagination = $scope.currentFeatureId +1 + '/8'; 
         };
 
         Object.size = function(obj) {

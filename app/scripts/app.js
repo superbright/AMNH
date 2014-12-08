@@ -19,6 +19,8 @@ angular
     'ui.router',
     'com.2fdevs.videogular',
     'com.2fdevs.videogular.plugins.controls',
+    'com.2fdevs.videogular.plugins.overlayplay',
+    'com.2fdevs.videogular.plugins.poster',
     'ngAudio'
     // 'btford.socket-io',
     // 'monospaced.qrcode'
@@ -95,7 +97,7 @@ angular
 
                               }
                             ],
-                  video: 'video.mp4',
+                  video: 'V12_Nicoll.mp4',
                   audio: 'audio.mp3'
                 },
                 likes : 4,

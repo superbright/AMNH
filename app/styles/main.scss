@@ -436,19 +436,18 @@ ul {
 #intro-wrapper {
   background-image: url("../images/intro_bg.png");
   background-repeat: no-repeat;
-  height: 100%;
+  height: 1440px;
+  width: 2560px;
   transition: all 2.3s ease-out;
-
   videogular {
     height: 1080px;
     margin: 0 auto;
-    width: 1922px;
-
-    #custom-play-pause-ui {
-      position: absolute;
-      bottom: 500px;
-      left: 914px;
-    }
+    width: 1920px;
+    // #custom-play-pause-ui {
+    //   position: absolute;
+    //   top: 33px;
+    //   left: 914px;
+    // }
   }
 }
 

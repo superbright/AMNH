@@ -31,12 +31,12 @@
         <h1 id="page-title" class="animated appear" ng-bind-template="{{currentFeature.title}}"></h1>
         
         <div class="skip-wrapper" ng-click="enterNavigation()" ng-if="isIntro">
-          <span class="skip-intro">Skip Introduction</span>
+          <span class="skip-intro" ng-bind-template="{{skipCopy}}"></span>
            <span class="icon arrow-right skip-icon"></span>
         </div>
         <div class="pagination-control" ng-if="isFeature"> <!-- This should be hidden in general but shown when a pagination is relevant to the context --> 
           <span class="icon arrow-left" ng-click="goPrev()"></span>
-          <span class="page-number"> {{currentFeatureId +1}}/8 </span> 
+          <span class="page-number" ng-bind-template="{{featurePagination}}"> </span> 
           <span class="icon arrow-right" ng-click="goNext()"></span>
         </div>
         </div>
@@ -92,6 +92,8 @@
     <script src="bower_components/videogular/videogular.js"></script>
     <script src="bower_components/videogular-controls/controls.js"></script>
     <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+    <script src="bower_components/videogular-poster/poster.js"></script>
+    <script src="bower_components/videogular-overlay-play/overlay-play.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
