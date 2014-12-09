@@ -267,7 +267,7 @@ videogular {
 .sound:hover,
 .sound:active,
 .sound.active {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .sound-file {
@@ -758,7 +758,9 @@ a:hover.pin span {
   font-family: Aller-Light;
   font-size: 28px;
   margin-left: 20px;
-  vertical-align: middle;
+  position: relative;
+  top: 2px;
+  //vertical-align: middle;
 }
 
 .media-content-wrapper {
@@ -814,7 +816,9 @@ a:hover.pin span {
 }
 
 .page-number {
+  bottom: 9px;
   padding: 0 50px;
+  position: relative;
 }
 
 #feature-video {
@@ -1160,6 +1164,7 @@ a:hover.pin span {
   padding: 15px 15px;
   text-transform: uppercase;
   width: 353px;
+  margin-bottom: 40px;
 }
 
 .sort-menu-item:hover, .sort-menu-item:active {

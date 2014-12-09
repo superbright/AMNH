@@ -26,7 +26,7 @@
       <header ng-controller="headerController">
       <div ng-if="!isSlideshow" class="slide-show-wrapper">
         <a ng-href="#/{{homeurl}}">
-          <img id="logo" ng-src="images/{{logo}}" alt="logo"/>
+          <img id="logo" class="animated appear delay-2x" ng-src="images/{{logo}}" alt="logo"/>
         </a>
         <h1 id="page-title" class="animated appear" ng-bind-template="{{currentFeature.title}}"></h1>
         
